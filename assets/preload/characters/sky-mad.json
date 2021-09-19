@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "sky mad left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				11,
+				-2
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "sky mad down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				28,
+				-9
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "sky mad up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				2,
+				0
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "sky mad right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "sky mad idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "sky mad left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "sky mad up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "sky mad right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "sky mad down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sky_mad_assets",
+	"position": [
+		90,
+		170
+	],
+	"healthicon": "sky-mad",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		20,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

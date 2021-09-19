@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				2
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "garcello Sing Note LEFT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-2
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "garcello Sing Note DOWN"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				-1
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "garcello Sing Note UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				-1
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "garcello Sing Note RIGHT"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "garcello idle dance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/garcello_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "garcello",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		232,
+		142
+	],
+	"camera_position": [
+		-70,
+		-60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

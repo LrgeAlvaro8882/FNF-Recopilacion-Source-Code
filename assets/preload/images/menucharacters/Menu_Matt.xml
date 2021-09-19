@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="campaign_menu_UI_characters.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="M Matt Idle0000" x="1008" y="3026" width="371" height="419" frameX="0" frameY="-17" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0001" x="1379" y="3026" width="368" height="421" frameX="-1" frameY="-15" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0002" x="1747" y="3026" width="366" height="423" frameX="-2" frameY="-13" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0003" x="2113" y="3026" width="363" height="425" frameX="-3" frameY="-11" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0004" x="2476" y="3026" width="360" height="427" frameX="-4" frameY="-9" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0005" x="2836" y="3026" width="358" height="429" frameX="-5" frameY="-7" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0006" x="3194" y="3026" width="355" height="432" frameX="-6" frameY="-4" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0007" x="3549" y="3026" width="351" height="434" frameX="-8" frameY="-2" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0008" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0009" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0010" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0011" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0012" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="M Matt Idle0013" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+</TextureAtlas>

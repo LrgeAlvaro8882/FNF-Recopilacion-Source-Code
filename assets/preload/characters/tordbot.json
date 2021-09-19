@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				0
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tordbot left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				-94
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tordbot down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				31
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tordbot up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				-20
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tordbot right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tordbot idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/TordBot",
+	"position": [
+		-489.05,
+		-1354.75
+	],
+	"healthicon": "tordbot",
+	"flip_x": false,
+	"healthbar_colors": [
+		223,
+		53,
+		38
+	],
+	"camera_position": [
+		91.2,
+		-744.15
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

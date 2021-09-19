@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				1
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mart left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-14,
+				-35
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mart down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				27
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mart up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-37,
+				1
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mart right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mart idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				47
+			],
+			"fps": 24,
+			"anim": "troll",
+			"indices": [],
+			"name": "mart troll"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mart_fartsetts",
+	"position": [
+		0,
+		420
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		0,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
