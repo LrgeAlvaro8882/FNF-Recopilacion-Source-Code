@@ -39,7 +39,9 @@ class FreeplayState extends MusicBeatState
 		['face'],                           //WiiK Fefe
 		['garcello', 'garcellotired', 'garcellodead', 'garcelloghosty'],//Garcello Week
 		['sky', 'sky', 'sky-mad'],          //Sky Week
-		['dorkan', 'marmota']               //Hiper Week
+		['dorkan', 'marmota'],              //Hiper Week
+		['sarvente', 'sarvente-dark', 'ruv', 'sarvente-lucifer'],//Sarvente Week
+		['selever']                         //Selever Week
 	];
 
 	var songs:Array<SongMetadata> = [];

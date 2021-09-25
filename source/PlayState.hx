@@ -155,6 +155,8 @@ class PlayState extends MusicBeatState
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
+	var bg:BGSprite;
+
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
 
@@ -199,6 +201,33 @@ class PlayState extends MusicBeatState
 	var tankAngle:Float = FlxG.random.float(-90, 45);
 
 	var bgBoppers:BGSprite;
+	var littleGuys:BGSprite;
+
+	var pillarbroke:BGSprite;
+	public var circ0:BGSprite;
+	public var circ1:BGSprite;
+	public var circ2:BGSprite;
+	public var circ1new:BGSprite;
+
+	var ass2:BGSprite;
+	var stageFront2:BGSprite;
+	var stageFront3:BGSprite;
+	var stageFront2Dark:BGSprite;
+	var stageFront3Dark:BGSprite;
+	var bgDark:BGSprite;
+	var machineDark:BGSprite;
+	var miraGradient:BGSprite;
+	var songName:FlxText;
+	var amogus:BGSprite;
+	var dripster:BGSprite;
+	var yellow:BGSprite;
+	var brown:BGSprite;
+	var cloudScroll:FlxTypedGroup<BGSprite>;
+	var farClouds:FlxTypedGroup<BGSprite>;
+	var orb:BGSprite;
+	var crowd:BGSprite;
+
+	var boshi:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -684,22 +713,16 @@ class PlayState extends MusicBeatState
 				add(tankGround);
 
 				tank0 = new BGSprite('tank0', -500, 650, 1.7, 1.5, ['fg tankhead far right'], false);
-				add(tank0);
 
 				tank1 = new BGSprite('tank1', -300, 750, 2, 0.2, ['fg'], false);
-				add(tank1);
 
 				tank2 = new BGSprite('tank2', 450, 940, 1.5, 1.5, ['foreground'], false);
-				add(tank2);
 
 				tank4 = new BGSprite('tank4', 1300, 900, 1.5, 1.5, ['fg'], false);
-				add(tank4);
 
 				tank5 = new BGSprite('tank5', 1620, 700, 1.5, 1.5, ['fg'], false);
-				add(tank5);
 
 				tank3 = new BGSprite('tank3', 1300, 1200, 1.5, 1.5, ['fg'], false);
-				add(tank3);
 
 			case 'light-it-up' | 'ruckus' | 'target-practice':
 				defaultCamZoom = 0.8;
@@ -709,8 +732,7 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 		
-				bgBoppers = new BGSprite('arena-characters', -600, 140, 0.99, 0.9, ['bg-characters']);
-				bgBoppers.animation.addByPrefix('bop', 'bg-characters', 24, false);
+				bgBoppers = new BGSprite('arena-characters', -600, 140, 0.99, 0.9, ['bg-characters'], false);
 				bgBoppers.setGraphicSize(Std.int(bgBoppers.width * 1));
 				bgBoppers.updateHitbox();
 				add(bgBoppers);
@@ -885,6 +907,390 @@ class PlayState extends MusicBeatState
 				zardybg.animation.play('Stage');
 				add(zardybg);
 
+
+			case 'wocky':
+				defaultCamZoom = 0.9;
+				curStage = 'wocky';
+				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+				bg.active = false;
+				add(bg);
+		
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				stageFront.active = false;
+				add(stageFront);
+				
+				phillyCityLights = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLights);
+		
+				for (i in 0...4)
+				{
+						var light:BGSprite = new BGSprite('win' + i, -600, -200, 0.9, 0.9);
+						light.visible = false;
+						light.updateHitbox();
+						light.antialiasing = true;
+						phillyCityLights.add(light);
+				}
+
+			case 'beathoven':
+				defaultCamZoom = 0.9;
+				curStage = 'beathoven';
+				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+				bg.active = false;
+				add(bg);
+		
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				stageFront.scrollFactor.set(0.9, 0.9);
+				stageFront.active = false;
+				add(stageFront);
+				
+				phillyCityLights = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLights);
+		
+				for (i in 0...4)
+				{
+						var light:BGSprite = new BGSprite('win' + i, -600, -200, 0.9, 0.9);
+						light.visible = false;
+						light.updateHitbox();
+						phillyCityLights.add(light);
+				
+				}
+		
+				littleGuys = new BGSprite('littleguys', 25, 200, 0.9, 0.9, ['Bottom Level Boppers'], false);
+				littleGuys.setGraphicSize(Std.int(littleGuys.width * 1));
+				littleGuys.updateHitbox();
+				add(littleGuys);
+
+			case 'hairball':
+				defaultCamZoom = 0.9;
+				curStage = 'hairball';
+				var bg:BGSprite = new BGSprite('sunset', -600, -200, 0.9, 0.9);
+				bg.active = false;
+				add(bg);
+
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				stageFront.active = false;
+				add(stageFront);
+
+				phillyCityLights = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLights);
+
+				for (i in 0...4)
+				{
+						var light:BGSprite = new BGSprite('win' + i, -600, -200, 0.9, 0.9);
+						light.visible = false;
+						light.updateHitbox();
+						phillyCityLights.add(light);
+				
+				}
+
+				upperBoppers = new BGSprite('upperBop', -600, -200, 1.05, 1.05, ['Upper Crowd Bob'], false);
+		        upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 1));
+		        upperBoppers.updateHitbox();
+		        add(upperBoppers);
+ 				
+				littleGuys = new BGSprite('christmas/littleguys', 25, 200, 0.9, 0.9, ['Bottom Level Boppers'], false);
+ 				littleGuys.setGraphicSize(Std.int(littleGuys.width * 1));
+		        littleGuys.updateHitbox();
+		        add(littleGuys);
+
+			case 'nyaw':
+				curStage = 'nyawclosed';
+
+				defaultCamZoom = 0.9;
+				curStage = 'nyaw';
+				var bg:BGSprite = new BGSprite('closed', -600, -200, 0.9, 0.9);
+				bg.active = false;
+				add(bg);
+		
+				bottomBoppers = new BGSprite('bgFreaks', -600, -200, 0.92, 0.92, ['Bottom Level Boppers'], false);
+				bottomBoppers.setGraphicSize(Std.int(bottomBoppers.width * 1));
+				bottomBoppers.updateHitbox();
+				add(bottomBoppers);
+		
+				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+				stageFront.updateHitbox();
+				stageFront.active = false;
+				add(stageFront);
+		
+				phillyCityLights = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLights);
+		
+				for (i in 0...4)
+				{
+						var light:BGSprite = new BGSprite('win' + i, -600, -200, 0.9, 0.9);
+						light.visible = false;
+						light.updateHitbox();
+						phillyCityLights.add(light);
+				
+				}
+		
+			    upperBoppers = new BGSprite('upperBop', -600, -200, 1.05, 1.05, ['Upper Crowd Bob'], false);
+				upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 1));
+				upperBoppers.updateHitbox();
+				add(upperBoppers);
+
+		    case 'zavodila':
+				defaultCamZoom = 0.7;
+				curStage = 'churchruv';
+				bg = new BGSprite('ruv/bg', -500, -850, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
+				bg.updateHitbox();
+				bg.active = false;
+				add(bg);
+	
+				var floor:BGSprite = new BGSprite('ruv/floor', -500, -850, 0.9, 0.9);
+				floor.setGraphicSize(Std.int(floor.width * 1.2));
+				floor.updateHitbox();
+				floor.active = false;
+				add(floor);
+	
+				var pillars:BGSprite = new BGSprite('ruv/pillars', -500, -850, 0.9, 0.9);
+				pillars.setGraphicSize(Std.int(pillars.width * 1.2));
+				pillars.updateHitbox();
+				pillars.active = false;
+				add(pillars);
+	
+				pillarbroke = new BGSprite('ruv/pillarbroke', -500, -800, 0.9, 0.9);
+				pillarbroke.setGraphicSize(Std.int(pillarbroke.width * 1.2));
+				pillarbroke.updateHitbox();
+				pillarbroke.active = false;
+
+			case 'casanova':
+				defaultCamZoom = 0.8;
+				curStage = 'churchselever';	
+				bg = new BGSprite('selever/bg', -500, -850, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
+				bg.updateHitbox();
+				bg.active = false;
+				add(bg);
+		
+				var floor:BGSprite = new BGSprite('selever/floor', -500, -850, 0.9, 0.9);
+				floor.setGraphicSize(Std.int(floor.width * 1.2));
+				floor.updateHitbox();
+				floor.active = false;
+				add(floor);
+		
+				var pillars:BGSprite = new BGSprite('selever/pillars', -500, -850, 0.9, 0.9);
+				pillars.setGraphicSize(Std.int(pillars.width * 1.2));
+				pillars.updateHitbox();
+				pillars.active = false;
+				add(pillars);
+
+			case 'parish' | 'worship':
+				defaultCamZoom = 0.7;
+				curStage = 'churchsarv';
+				bg = new BGSprite('sarv/bg', -500, -850, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 1.2));	
+				bg.updateHitbox();
+				bg.active = false;
+				add(bg);
+		
+				var floor:BGSprite = new BGSprite('sarv/floor', -500, -850, 0.9, 0.9);
+				floor.setGraphicSize(Std.int(floor.width * 1.2));
+				floor.updateHitbox();
+				floor.active = false;
+				add(floor);
+		
+				var pillars:BGSprite = new BGSprite('sarv/pillars', -500, -850, 0.9, 0.9);
+				pillars.setGraphicSize(Std.int(pillars.width * 1.2));
+				pillars.updateHitbox();
+				pillars.active = false;
+				add(pillars);
+		
+				if (SONG.song.contains('Worship'))
+				{
+					pillars.color = 0xFFD6ABBF;
+					floor.color = 0xFFD6ABBF;
+					bg.color = 0xFFD6ABBF;
+				}
+		
+			case 'gospel':
+				defaultCamZoom = 0.7;
+				curStage = 'churchgospel';
+		
+				var blackbg:BGSprite = new BGSprite('gospel/blackbg', -500, -850, 0.9, 0.9);
+				blackbg.setGraphicSize(Std.int(blackbg.width * 1.2));
+				blackbg.updateHitbox();
+				blackbg.active = false;
+				add(blackbg);
+		
+				circ0 = new BGSprite('gospel/circ0', -500, -850, 0.9,  0.9);
+				circ0.setGraphicSize(Std.int(circ0.width * 1.2));
+				circ0.updateHitbox();
+				circ0.active = false;
+				add(circ0);
+		
+				circ1new = new BGSprite('gospel/circ1new', 288, -459, 0.9, 0.9);
+				circ1new.setGraphicSize(Std.int(circ1new.width * 1.2));
+				circ1new.updateHitbox();
+				circ1new.active = false;	
+				add(circ1new);
+		
+				circ2 = new BGSprite('gospel/circ2', -500, -850, 0.9, 0.9);
+				circ2.setGraphicSize(Std.int(circ2.width * 1.2));
+				circ2.updateHitbox();
+				circ2.active = false;
+				add(circ2);
+		
+				bg = new BGSprite('gospel/bg', -500, -850, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
+				bg.updateHitbox();
+				bg.active = false;
+				add(bg);
+		
+				var floor:BGSprite = new BGSprite('gospel/floor', -500, -850, 0.9, 0.9);
+				floor.setGraphicSize(Std.int(floor.width * 1.2));
+				floor.updateHitbox();
+				floor.active = false;
+				add(floor);
+		
+				var pillars:BGSprite = new BGSprite('gospel/pillars', -500, -850, 0.9, 0.9);
+				pillars.setGraphicSize(Std.int(pillars.width * 1.2));
+				pillars.updateHitbox();
+				pillars.active = false;
+				add(pillars);
+
+			case 'sussus-moogus' | 'sabotage' | 'meltdown':
+				curStage = 'polus';
+				defaultCamZoom = 0.9;  
+
+				var sky:BGSprite = new BGSprite('polus/polusSky', -834.3, -620.5, 0.5, 0.5);
+				sky.active = false;
+				add(sky);		
+	
+				var rocks:BGSprite = new BGSprite('polus/polusrocks', -915.8, -411.3, 0.6, 0.6);
+				rocks.updateHitbox();
+				rocks.active = false;
+				add(rocks);	
+				
+				var hills:BGSprite = new BGSprite('polus/polusHills', -1238.05, -180.55, 0.9, 0.9);
+				hills.updateHitbox();
+				hills.active = false;
+				add(hills);
+
+				var warehouse:BGSprite = new BGSprite('polus/polusWarehouse', -458.35, -315.6, 0.9, 0.9);
+				warehouse.updateHitbox();
+				warehouse.active = false;
+				add(warehouse);
+
+				var crowd:BGSprite = new BGSprite('polus/CrowdBop', -280.5, 240.8, 1, 1, ['CrowdBop'], false);
+				crowd.updateHitbox();
+				crowd.scale.set(1.5, 1.5);
+				if(SONG.song.toLowerCase() == 'meltdown') {
+					add(crowd);
+				}
+
+			case 'sussus-toogus' | 'lights-out':
+				defaultCamZoom = 0.85;
+				curStage = 'toogus';
+				var bg:BGSprite = new BGSprite('Mira', 0, 50, 1, 1);
+				bg.setGraphicSize(Std.int(bg.width * 1.4));
+				bg.active = false;
+				add(bg);
+
+				bgDark = new BGSprite('MiraDark', 0, 50, 1, 1);
+				bgDark.setGraphicSize(Std.int(bgDark.width * 1.4));
+				bgDark.active = false;
+				bgDark.alpha = 0;
+				add(bgDark);
+
+				var stageFront:BGSprite = new BGSprite('vending_machine', 1000, 150, 1, 1);
+				stageFront.updateHitbox();
+				stageFront.active = false;
+				add(stageFront);
+
+				machineDark = new BGSprite('vending_machineDark', 1000, 150, 1, 1);
+				machineDark.updateHitbox();
+				machineDark.active = false;
+				machineDark.alpha = 0;
+				add(machineDark);
+				
+				var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
+				stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+				stageCurtains.updateHitbox();	
+				stageCurtains.active = false;
+		
+				//	add(stageCurtains);
+
+				case 'reactor':
+				defaultCamZoom = 0.5;
+				curStage = 'reactor';
+				var bg:BGSprite = new BGSprite('reactor/reactor background', -2300, -1700, 1, 1);
+				bg.setGraphicSize(Std.int(bg.width * 0.7));
+				bg.active = false;
+				add(bg);
+
+				yellow = new BGSprite('reactor/susBoppers', -400, 150, 1, 1, ['yellow sus'], false);
+				yellow.setGraphicSize(Std.int(yellow.width * 0.7));
+				yellow.active = true;
+				add(yellow);
+
+				var pillar1:BGSprite = new BGSprite('reactor/back pillars', -2300, -1700, 1, 1);
+				pillar1.setGraphicSize(Std.int(pillar1.width * 0.7));
+				pillar1.active = false;
+				add(pillar1);
+
+				dripster = new BGSprite('reactor/susBoppers', 1375, 150, 1, 1, ['blue sus'], false);
+				dripster.setGraphicSize(Std.int(dripster.width * 0.7));
+				dripster.active = true;
+				add(dripster);
+
+				var pillar2:BGSprite = new BGSprite('reactor/middle pillars', -2300, -1700, 1, 1);
+				pillar2.setGraphicSize(Std.int(pillar2.width * 0.7));
+				pillar2.active = false;
+				add(pillar2);
+
+				amogus = new BGSprite('reactor/susBoppers', 1670, 250, 1, 1, ['white sus'], false);
+				amogus.setGraphicSize(Std.int(amogus.width * 0.7));
+				amogus.active = true;
+				add(amogus);
+
+				brown = new BGSprite('reactor/susBoppers', -850, 190, 1, 1);
+				brown.setGraphicSize(Std.int(brown.width * 0.7));
+				brown.active = true;
+				add(brown);
+
+				var pillar3:BGSprite = new BGSprite('reactor/front pillars', -2300, -1700, 1, 1);
+				pillar3.setGraphicSize(Std.int(pillar3.width * 0.7));
+				pillar3.active = false;
+				add(pillar3);
+
+				orb = new BGSprite('reactor/ball of big ol energy', -460, -1300, 1, 1);
+				orb.setGraphicSize(Std.int(orb.width * 0.7));
+				orb.active = false;
+				add(orb);
+
+				var cranes:BGSprite = new BGSprite('reactor/upper cranes', -735, -1500, 1, 1);
+				cranes.setGraphicSize(Std.int(cranes.width * 0.7));
+				cranes.active = false;
+				add(cranes);
+
+				var console1:BGSprite = new BGSprite('reactor/center console', -260, 150, 1, 1);
+				console1.setGraphicSize(Std.int(console1.width * 0.7));
+				console1.active = false;
+				add(console1);
+
+				var console2:BGSprite = new BGSprite('reactor/side console', -1380, 450, 1, 1);
+				console2.setGraphicSize(Std.int(console2.width * 0.7));
+				console2.active = false;
+				add(console2);				
+		
+				//	add(stageCurtains);
+
+			case 'defeat':
+				defaultCamZoom = 0.9;
+				curStage = 'defeat';
+				var defeat:BGSprite = new BGSprite('defeatfnf', 0, 100, 1, 1);		
+				defeat.setGraphicSize(Std.int(defeat.width * 2));
+				add(defeat);
+			
 			default:
 				defaultCamZoom = 0.9;
 				curStage = 'stage';
@@ -929,6 +1335,8 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-pixel';
 				case 'tank':
 					gfVersion = 'gf-tankman';
+				case 'tank-stress':
+					gfVersion = 'pico-speaker';
 				case 'swordarena':
 					gfVersion = 'gf-mii';
 				case 'arenanight':
@@ -945,6 +1353,8 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-mii';
 				case 'boxKHF':
 					gfVersion = 'gf-mii';
+				case 'wocky' | 'beathoven' | 'hairball' | 'nyaw' | 'nyawclosed':
+					gfVersion = 'gf-kapi';
 				default:
 					gfVersion = 'gf';
 			}
@@ -984,6 +1394,10 @@ class PlayState extends MusicBeatState
 				GF_Y -= 30;
 				DAD_X -= 80;
                 DAD_Y += 60;
+			case 'tank-stress':
+				GF_X -= 90;
+				GF_Y += 155;
+				BF_X += 40;
 			case 'swordarena':
 				BF_X += 200;
 			case 'arenanight':
@@ -1014,6 +1428,15 @@ class PlayState extends MusicBeatState
 				GF_Y += 140;
 				BF_X += 80;
 				BF_Y += 140;
+			case 'churchsarv' | 'churchruv' | 'churchgospel' | 'churchselever':
+				GF_X -= 100;
+				GF_Y -= 70;
+				DAD_X -= 100;
+				DAD_Y += 100;
+				BF_X += 100;
+				BF_Y += 100;
+			case 'defeat':
+				GF_X -= 2000;
 		}
 
 		gf = new Character(GF_X, GF_Y, gfVersion);
@@ -1060,12 +1483,29 @@ class PlayState extends MusicBeatState
 
 		add(gfGroup);
 
+		switch (curStage)
+		{
+			case 'churchruv':
+				add(pillarbroke);
+		}
+
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
 
 		add(dadGroup);
 		add(boyfriendGroup);
+
+		switch (curStage)
+		{
+			case 'tank':
+				add(tank0);
+				add(tank1);
+				add(tank2);
+				add(tank4);
+				add(tank5);
+				add(tank3);
+		}
 
 		foregroundGroup = new FlxTypedGroup<FlxSprite>();
 		add(foregroundGroup);
@@ -1187,7 +1627,14 @@ class PlayState extends MusicBeatState
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		iconP2.visible = !ClientPrefs.hideHud;
 		add(iconP2);
-		reloadHealthBarColors();
+		if(ClientPrefs.iconColors)
+		{
+			reloadHealthBarColors();
+		}
+		else if(!ClientPrefs.iconColors)
+		{
+			healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		}
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1305,8 +1752,6 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
-				case 'foolhardy':
-					dad.alpha = 0;
 				case 'senpai' | 'roses' | 'thorns':
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
@@ -1945,8 +2390,8 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				opponentStrums.add(babyArrow);
-			}
+			    opponentStrums.add(babyArrow);
+		    }
 
 			babyArrow.playAnim('static');
 			babyArrow.x += 50;
@@ -2076,6 +2521,15 @@ class PlayState extends MusicBeatState
 		Conductor.songPosition = FlxG.sound.music.time;
 		vocals.time = Conductor.songPosition;
 		vocals.play();
+	}
+
+	var doingFloatShit:Bool = false;
+	var tween:FlxTween;
+	function doFloatShit()
+	{
+		doingFloatShit = true;
+		
+		tween = FlxTween.linearMotion(dad, dad.x, dad.y, dad.x, dad.y - 100, 2, true, {ease: FlxEase.quadInOut, type: FlxTweenType.PINGPONG});
 	}
 
 	private var paused:Bool = false;
@@ -2210,6 +2664,11 @@ class PlayState extends MusicBeatState
 				moveTank();
 		}
 
+		if ((dad.curCharacter == 'sarvente-lucifer') && !doingFloatShit)
+		{
+			doFloatShit();
+		}
+
 		if(curSong == 'Guns')
 		{
 			var sectionNum:Int = Math.floor(curBeat / 4);
@@ -2236,6 +2695,11 @@ class PlayState extends MusicBeatState
 			if(sectionNum > 96 && sectionNum < 104) {
 				boyfriend.y -= 100 * elapsed;
 			}
+		}
+
+		if(curStage == 'churchruv')
+		{
+			camFollow.y = dad.getMidpoint().y - 100;
 		}
 
 		if(!inCutscene) {
@@ -2408,6 +2872,57 @@ class PlayState extends MusicBeatState
 		}
 		// better streaming of shit
 
+		if(curSong == 'Defeat' && songMisses == 1 && camHUD.visible)
+		{
+			camHUD.visible = false;
+			inCutscene = true;
+			canPause = false;
+			camZooming = false;
+			startedCountdown = false;
+			generatedMusic = false;
+	
+			vocals.stop();
+	
+			camFollow.x = dad.getMidpoint().x - 400;
+			camFollow.y = dad.getMidpoint().y - 170;
+			dad.playAnim('death');
+	
+			camFollow.y = dad.getMidpoint().y - 200;
+			camFollow.x = dad.getMidpoint().x - 450;
+	
+			FlxG.sound.play(Paths.sound('black-death'));
+			
+			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1.5, {ease: FlxEase.circOut});
+	
+			new FlxTimer().start(0.6, function(tmr:FlxTimer)
+			{
+				boyfriend.stunned = true;
+	
+				persistentUpdate = false;
+				persistentDraw = false;
+				paused = true;
+	
+				vocals.stop();
+				FlxG.sound.music.stop();
+	
+				if(ClientPrefs.instantRespawn)
+				{
+					FlxG.switchState(new PlayState());
+				}
+				else if(!ClientPrefs.instantRespawn)
+				{
+				    openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y));
+				}
+	
+				#if windows
+				// Game Over doesn't get his own variable because it's only used here
+				DiscordClient.changePresence("Game Over - " + detailsText, displaySongName + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				#end
+	
+				// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+			});
+		}
+
 		if (health <= 0 && !practiceMode)
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', []);
@@ -2422,7 +2937,14 @@ class PlayState extends MusicBeatState
 				vocals.stop();
 				FlxG.sound.music.stop();
 
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y));
+				if(ClientPrefs.instantRespawn)
+				{
+					FlxG.switchState(new PlayState());
+				}
+				else if(!ClientPrefs.instantRespawn)
+				{
+				    openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y));
+				}
 
 				// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 				
@@ -2446,8 +2968,15 @@ class PlayState extends MusicBeatState
 					vocals.stop();
 					FlxG.sound.music.stop();
 		
-					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y));
-		
+					if(ClientPrefs.instantRespawn)
+					{
+						FlxG.switchState(new PlayState());
+					}
+					else if(!ClientPrefs.instantRespawn)
+					{
+					    openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y));
+					}
+
 					#if windows
 					DiscordClient.changePresence("Game Over - " + detailsText, displaySongName + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 					#end
@@ -3152,7 +3681,14 @@ class PlayState extends MusicBeatState
 
 			if (storyPlaylist.length <= 0)
 			{
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				if(ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				}
+				else if (!ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu-alt'));
+				}
 
 				transIn = FlxTransitionableState.defaultTransIn;
 				transOut = FlxTransitionableState.defaultTransOut;
@@ -3214,7 +3750,14 @@ class PlayState extends MusicBeatState
 		{
 			trace('WENT BACK TO FREEPLAY??');
 			MusicBeatState.switchState(new FreeplayState());
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			if(ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}
+			else if (!ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu-alt'));
+			}
 			usedPractice = false;
 			changedDifficulty = false;
 			cpuControlled = false;
@@ -3939,7 +4482,6 @@ class PlayState extends MusicBeatState
 			{
 				case 2426:
 					var zardybg = new BGSprite('Maze', -600, -200, 0.9, 0.9, ['Stage'], true);
-					zardybg.animation.play('Stage');
 				case 2427 | 2428 | 2429 | 2430:
 					FlxG.camera.shake(0.05);
 					dad.alpha -= 0.05;
@@ -4097,6 +4639,16 @@ class PlayState extends MusicBeatState
 				}
 			case 'swordarena':
 				bgBoppers.dance();
+			case 'beathoven':
+				littleGuys.dance();
+			case 'hairball':
+				littleGuys.dance();
+				upperBoppers.dance();
+			case 'nyaw':
+				upperBoppers.dance();
+				bottomBoppers.dance();
+			case 'meltdown':
+				crowd.dance();
 		}
 
 		if (curStage == 'spooky' && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)
@@ -4107,6 +4659,23 @@ class PlayState extends MusicBeatState
 
 		setOnLuas('curBeat', curBeat);
 		callOnLuas('onBeatHit', []);
+
+		if ((dad.curCharacter.contains('ruv') && dad.animation.curAnim.name.startsWith('sing') && curBeat > ruvShakeBeat))
+		{
+			ruvShake();
+		}
+	}
+
+	var ruvShakeBeat:Int = 0;
+	function ruvShake():Void
+	{
+		FlxG.camera.shake(0.005, 0.1);
+		ruvShakeBeat = curBeat;
+		
+		if (gf.animOffsets.exists('scared'))
+		{
+			gf.playAnim('scared', true);
+		}
 	}
 
 	public function callOnLuas(event:String, args:Array<Dynamic>):Dynamic {

@@ -26,7 +26,10 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
 	public static var hitSound:Bool = false;
-	public static var resetButton:Bool = false;
+	public static var resetButton:Bool = true;
+	public static var newMusicMenu:Bool = false;
+	public static var instantRespawn:Bool = false;
+	public static var iconColors:Bool = true;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -84,6 +87,9 @@ class ClientPrefs {
 		FlxG.save.data.hideTime = hideTime;
 		FlxG.save.data.hitSound = hitSound;
 		FlxG.save.data.resetButton = resetButton;
+		FlxG.save.data.newMusicMenu = newMusicMenu;
+		FlxG.save.data.instantRespawn = instantRespawn;
+		FlxG.save.data.iconColors = iconColors;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -171,6 +177,16 @@ class ClientPrefs {
 		if(FlxG.save.data.resetButton != null) {
 			resetButton = FlxG.save.data.resetButton;
 		}
+		if(FlxG.save.data.newMusicMenu != null) {
+			newMusicMenu = FlxG.save.data.newMusicMenu;
+		}
+		if(FlxG.save.data.instantRespawn != null) {
+			instantRespawn = FlxG.save.data.instantRespawn;
+		}
+		if(FlxG.save.data.iconColors != null) {
+			iconColors = FlxG.save.data.iconColors;
+		}
+
 
 		var save:FlxSave = new FlxSave();
 		save.bind('controls', 'ninjamuffin99');

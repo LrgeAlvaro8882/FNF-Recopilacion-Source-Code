@@ -136,7 +136,14 @@ class MainMenuState extends MusicBeatState
 	var achievementID:Int = 0;
 	function giveAchievement() {
 		add(new AchievementObject(achievementID, camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		if(ClientPrefs.newMusicMenu)
+		{
+			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		}
+		else if (!ClientPrefs.newMusicMenu)
+		{
+			FlxG.sound.play(Paths.sound('confirmMenu-alt'), 0.7);
+		}
 		trace('Giving achievement ' + achievementID);
 	}
 	#end
@@ -181,7 +188,14 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+			        if(ClientPrefs.newMusicMenu)
+			        {
+			        	FlxG.sound.play(Paths.sound('confirmMenu'));
+			        }
+			        else if (!ClientPrefs.newMusicMenu)
+			        {
+			        	FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+			        }
 
 					if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 

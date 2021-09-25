@@ -155,7 +155,14 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				if(ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				}
+				else if (!ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu-alt'), 0);
+				}
 
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 			}
@@ -298,7 +305,14 @@ class TitleState extends MusicBeatState
 			if(titleText != null) titleText.animation.play('press');
 
 			FlxG.camera.flash(FlxColor.WHITE, 1);
-			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+			if(ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+			}
+			else if (!ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.play(Paths.sound('confirmMenu-alt'), 0.7);
+			}
 
 			transitioning = true;
 			// FlxG.sound.music.stop();
@@ -415,13 +429,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('Friday Night');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('Funkin');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Compilation'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();

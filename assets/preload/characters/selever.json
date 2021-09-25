@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-49,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SelLeft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-15,
+				0
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SelDown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				79,
+				-2
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SelUp",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-8,
+				2
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SelRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "SelIdle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-58,
+				22
+			],
+			"loop": false,
+			"anim": "hey",
+			"fps": 24,
+			"name": "SelHey",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Selever",
+	"position": [
+		50,
+		-70
+	],
+	"healthicon": "selever",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		0,
+		54
+	],
+	"camera_position": [
+		70,
+		-70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -85,7 +85,15 @@ class GameOverSubstate extends MusicBeatSubstate
 			else
 				MusicBeatState.switchState(new FreeplayState());
 
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+			if(ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}
+			else if(!ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu-alt'));
+			}
 		}
 
 		if (bf.animation.curAnim.name == 'firstDeath')
@@ -118,8 +126,13 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var isEnding:Bool = false;
 
+	var daStage = PlayState.curStage;
 	function coolStartDeath(?volume:Float = 1):Void
 	{
+		if (daStage == 'tank' || daStage == 'tank-stress')
+		{
+			FlxG.sound.play(Paths.sound('jeffGameover-' + FlxG.random.int(1, 25)), volume = 2);
+		}
 		FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix), volume);
 	}
 

@@ -515,7 +515,14 @@ class ControlsSubstate extends MusicBeatSubstate {
 				}
 
 				reloadKeys();
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+				if(ClientPrefs.newMusicMenu)
+			    {
+			    	FlxG.sound.playMusic(Paths.music('confirmMenu'));
+			    }
+			    else if (!ClientPrefs.newMusicMenu)
+			    {
+			    	FlxG.sound.playMusic(Paths.music('confirmMenu-alt'));
+			    }
 				rebindingKey = -1;
 			}
 
@@ -693,7 +700,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 		,'FPS Counter'
 		#end
 		,'Hit Sound',
-		'Reset Button'
+		'Reset Button',
+		'New Menu Music',
+		'Instant Respawn',
+		'Icon Colors'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -874,10 +884,21 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
+
 					case 'Hit Sound':
 						ClientPrefs.hitSound = !ClientPrefs.hitSound;
+
 					case 'Reset Button':
 						ClientPrefs.resetButton = !ClientPrefs.resetButton;
+
+					case 'New Menu Music':
+						ClientPrefs.newMusicMenu = !ClientPrefs.newMusicMenu;
+
+					case 'Instant Respawn':
+						ClientPrefs.instantRespawn = !ClientPrefs.instantRespawn;
+
+					case 'Icon Colors':
+						ClientPrefs.iconColors = !ClientPrefs.iconColors;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -975,6 +996,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, when you hit a note, a sound will play.";
 			case 'Reset Button':
 				daText = "If checked, your reset keybind will be active.";
+			case 'New Menu Music':
+				daText = "If checked, the menu music and confirm sound\nwill change to the new ones.";
+			case 'Instant Respawn':
+				daText = "If checked, you'll instantly respawn after dying.";
+			case 'Icon Colors':
+				daText = "If checked, the color behind the icons\nnow fit with their theme.";
 		}
 		descText.text = daText;
 
@@ -1062,6 +1089,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.hitSound;
 					case 'Reset Button':
 						daValue = ClientPrefs.resetButton;
+					case 'New Menu Music':
+						daValue = ClientPrefs.newMusicMenu;
+					case 'Instant Respawn':
+						daValue = ClientPrefs.instantRespawn;
+					case 'Icon Colors':
+						daValue = ClientPrefs.iconColors;
 				}
 				checkbox.daValue = daValue;
 			}

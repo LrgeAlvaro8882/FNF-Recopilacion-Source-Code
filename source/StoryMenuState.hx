@@ -41,7 +41,10 @@ class StoryMenuState extends MusicBeatState
 		true,	//WiiK 3
 		true,   //WiiK Fefe
 		true,   //Garcello Week
-		true    //Sky Week
+		true,   //Sky Week
+		true,   //Hiper Week
+		true,   //Sarvente Week
+		true    //Selever Week
 	];
 
 	//It works like this:
@@ -63,6 +66,8 @@ class StoryMenuState extends MusicBeatState
 		['matt', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['garcello', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf']
 	];
@@ -86,7 +91,9 @@ class StoryMenuState extends MusicBeatState
 		"haha fefe funni",
 		"Smoke 'Em Out Struggle",
 		"Sky By @bfswifeforever",
-		"Hey, soy Hiper."
+		"Hey, soy Hiper.",
+		"Sarvente",
+		"Selever"
 	];
 
 	//Background asset name, the background files are stored on assets/preload/menubackgrounds/
@@ -108,7 +115,9 @@ class StoryMenuState extends MusicBeatState
 		'template',
 		'garcello',
 		'template',
-		'philly'
+		'philly',
+		'template',
+		'template'
 	];
 	
 	var scoreText:FlxText;
@@ -343,7 +352,14 @@ class StoryMenuState extends MusicBeatState
 		{
 			if (stopspamming == false)
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+			    if(ClientPrefs.newMusicMenu)
+			    {
+			    	FlxG.sound.play(Paths.sound('confirmMenu'));
+			    }
+			    else if (!ClientPrefs.newMusicMenu)
+			    {
+			    	FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+			    }
 
 				grpWeekText.members[curWeek].startFlashing();
 				grpWeekCharacters.members[1].animation.play('confirm');
