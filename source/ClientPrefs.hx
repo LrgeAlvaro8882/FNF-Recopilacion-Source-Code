@@ -30,6 +30,8 @@ class ClientPrefs {
 	public static var newMusicMenu:Bool = false;
 	public static var instantRespawn:Bool = false;
 	public static var iconColors:Bool = true;
+	public static var tankmanAscends:Bool = true;
+	public static var tankmanDeathLines:Bool = true;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -90,6 +92,8 @@ class ClientPrefs {
 		FlxG.save.data.newMusicMenu = newMusicMenu;
 		FlxG.save.data.instantRespawn = instantRespawn;
 		FlxG.save.data.iconColors = iconColors;
+		FlxG.save.data.tankmanAscends = tankmanAscends;
+		FlxG.save.data.tankmanDeathLines = tankmanDeathLines;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -185,6 +189,12 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.iconColors != null) {
 			iconColors = FlxG.save.data.iconColors;
+		}
+		if(FlxG.save.data.tankmanAscends != null) {
+			tankmanAscends = FlxG.save.data.tankmanAscends;
+		}
+		if(FlxG.save.data.tankmanDeathLines != null) {
+			tankmanAscends = FlxG.save.data.tankmanAscends;
 		}
 
 

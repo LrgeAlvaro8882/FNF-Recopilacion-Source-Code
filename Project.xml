@@ -68,6 +68,9 @@
 		<library name="zardy"         preload="true" />
 		<library name="garcello"      preload="true" />
 		<library name="tord"          preload="true" />
+		<library name="kapi"          preload="true" />
+		<library name="sarv"          preload="true" />
+		<library name="impostor"      preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
@@ -86,6 +89,9 @@
 		<library name="zardy"         preload="false" />
 		<library name="garcello"      preload="false" />
 		<library name="tord"          preload="false" />
+		<library name="kapi"          preload="false" />
+		<library name="sarv"          preload="false" />
+		<library name="impostor"      preload="false" />
 	</section>
 	
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
@@ -118,6 +124,12 @@
 	<assets path="assets/tord"          library="tord"          exclude="*.mp3" unless="web"/>
 	<assets path="assets/garcello"      library="garcello"      exclude="*.ogg" if="web"/>
 	<assets path="assets/garcello"      library="garcello"      exclude="*.mp3" unless="web"/>
+	<assets path="assets/kapi"          library="kapi"          exclude="*.ogg" if="web"/>
+	<assets path="assets/kapi"          library="kapi"          exclude="*.mp3" unless="web"/>
+	<assets path="assets/sarv"          library="sarv"          exclude="*.ogg" if="web"/>
+	<assets path="assets/sarv"          library="sarv"          exclude="*.mp3" unless="web"/>
+	<assets path="assets/impostor"      library="impostor"      exclude="*.ogg" if="web"/>
+	<assets path="assets/impostor"      library="impostor"      exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />

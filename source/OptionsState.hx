@@ -491,7 +491,14 @@ class ControlsSubstate extends MusicBeatSubstate {
 					controlArray = ClientPrefs.defaultKeys.copy();
 					reloadKeys();
 					changeSelection();
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 				} else {
 					bindingTime = 0;
 					rebindingKey = getSelectedKey();
@@ -703,7 +710,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Reset Button',
 		'New Menu Music',
 		'Instant Respawn',
-		'Icon Colors'
+		'Icon Colors',
+		'Tankman Ascending',
+		'Tankman Death Lines'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -899,6 +908,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Icon Colors':
 						ClientPrefs.iconColors = !ClientPrefs.iconColors;
+
+					case 'Tankman Ascending':
+						ClientPrefs.tankmanAscends = !ClientPrefs.tankmanAscends;
+
+					case 'Tankman Death Lines':
+						ClientPrefs.tankmanDeathLines = !ClientPrefs.tankmanDeathLines;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -1002,6 +1017,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, you'll instantly respawn after dying.";
 			case 'Icon Colors':
 				daText = "If checked, the color behind the icons\nnow fit with their theme.";
+			case 'Tankman Ascending':
+				daText = "If checked, Tankman will ascend on Guns.";
+			case 'Tankman Death Lines':
+				daText = "If checked, Tankman will insult you when\nyou die on any of his songs.";
 		}
 		descText.text = daText;
 
@@ -1095,6 +1114,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.instantRespawn;
 					case 'Icon Colors':
 						daValue = ClientPrefs.iconColors;
+					case 'Tankman Ascending':
+						daValue = ClientPrefs.tankmanAscends;
+					case 'Tankman Death Lines':
+						daValue = ClientPrefs.tankmanDeathLines;
 				}
 				checkbox.daValue = daValue;
 			}

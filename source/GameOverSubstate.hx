@@ -106,6 +106,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			if (bf.animation.curAnim.finished)
 			{
+				if(ClientPrefs.tankmanDeathLines)
+				{
+					tankmanBruh();
+				}
 				coolStartDeath();
 				bf.startedDeath = true;
 			}
@@ -127,12 +131,17 @@ class GameOverSubstate extends MusicBeatSubstate
 	var isEnding:Bool = false;
 
 	var daStage = PlayState.curStage;
-	function coolStartDeath(?volume:Float = 1):Void
+
+	function tankmanBruh(?volume:Float = 7):Void
 	{
 		if (daStage == 'tank' || daStage == 'tank-stress')
 		{
-			FlxG.sound.play(Paths.sound('jeffGameover-' + FlxG.random.int(1, 25)), volume = 2);
+			FlxG.sound.play(Paths.sound('jeffGameover-' + FlxG.random.int(1, 25)), volume);
 		}
+	}
+
+	function coolStartDeath(?volume:Float = 1):Void
+	{
 		FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix), volume);
 	}
 

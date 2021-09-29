@@ -227,7 +227,16 @@ class PlayState extends MusicBeatState
 	var orb:BGSprite;
 	var crowd:BGSprite;
 
-	var boshi:BGSprite;
+	private var boom:Bool = false;
+	private var micfight:Bool = false;
+	private var miconet:Bool = false;
+	var mic:BGSprite;
+	var micone:BGSprite;
+	var mimi:BGSprite;
+	var room:BGSprite;
+	var blackshit:BGSprite;
+	var fireshit:BGSprite;
+	private var floatvalve:Float = 0;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -2669,31 +2678,35 @@ class PlayState extends MusicBeatState
 			doFloatShit();
 		}
 
-		if(curSong == 'Guns')
+		//sussy shit
+		if(ClientPrefs.tankmanAscends)
 		{
-			var sectionNum:Int = Math.floor(curBeat / 4);
-			if(sectionNum > 56 && sectionNum < 64) {
-				dad.y -= 100 * elapsed;
-			}
-	
-			if(sectionNum > 72 && sectionNum < 80) {
-				dad.y -= 100 * elapsed;
-			}
-	
-			if(sectionNum > 88 && sectionNum < 96) {
-				dad.y -= 100 * elapsed;
-			}
-	
-			if(sectionNum > 64 && sectionNum < 72) {
-				boyfriend.y -= 100 * elapsed;
-			}
-	
-			if(sectionNum > 80 && sectionNum < 88) {
-				boyfriend.y -= 100 * elapsed;
-			}
-	
-			if(sectionNum > 96 && sectionNum < 104) {
-				boyfriend.y -= 100 * elapsed;
+			if(curSong == 'Guns')
+			{
+				var sectionNum:Int = Math.floor(curBeat / 4);
+				if(sectionNum > 56 && sectionNum < 64) {
+					dad.y -= 100 * elapsed;
+				}
+			
+				if(sectionNum > 72 && sectionNum < 80) {
+					dad.y -= 100 * elapsed;
+				}
+			
+				if(sectionNum > 88 && sectionNum < 96) {
+					dad.y -= 100 * elapsed;
+				}
+			
+				if(sectionNum > 64 && sectionNum < 72) {
+					boyfriend.y -= 100 * elapsed;
+				}
+			
+				if(sectionNum > 80 && sectionNum < 88) {
+					boyfriend.y -= 100 * elapsed;
+				}
+			
+				if(sectionNum > 96 && sectionNum < 104) {
+					boyfriend.y -= 100 * elapsed;
+				}
 			}
 		}
 
@@ -4490,6 +4503,29 @@ class PlayState extends MusicBeatState
 					FlxG.camera.stopFX();
 				case 2943 | 2946 | 2948 | 2950 | 2452 | 2454:
 					dad.alpha -= 0.2;
+			}
+		}
+
+		if(ClientPrefs.camZooms)
+		{
+			if(curSong == 'Release' && curStep == 838)
+			{
+				{
+					FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1, {
+						ease: FlxEase.expoOut
+					});
+				}
+			}
+		}
+		else if(!ClientPrefs.camZooms)
+		{
+			if(curSong == 'Release' && curStep == 838)
+			{
+				{
+					FlxTween.tween(FlxG.camera, {zoom: 1.1}, 1, {
+						ease: FlxEase.expoOut
+					});
+				}
 			}
 		}
 	}
