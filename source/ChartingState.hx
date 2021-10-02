@@ -136,7 +136,7 @@ class ChartingState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Chart Editor", StringTools.replace(PlayState.SONG.song, '-', ' '));
+		DiscordClient.changePresence("Menú Debug", StringTools.replace(PlayState.SONG.song, '-', ' '));
 		#end
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

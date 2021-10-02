@@ -41,7 +41,8 @@ class FreeplayState extends MusicBeatState
 		['sky', 'sky', 'sky-mad'],          //Sky Week
 		['dorkan', 'marmota'],              //Hiper Week
 		['sarvente', 'sarvente-dark', 'ruv', 'sarvente-lucifer'],//Sarvente Week
-		['selever']                         //Selever Week
+		['selever'],                        //Selever Week
+		['annie', 'annie', 'annie', 'annie-drunk']//Annie Week
 	];
 
 	var songs:Array<SongMetadata> = [];
@@ -95,7 +96,7 @@ class FreeplayState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("En el menú de Freeplay", null);
 		#end
 
 		for (i in 1...WeekData.songsNames.length) {

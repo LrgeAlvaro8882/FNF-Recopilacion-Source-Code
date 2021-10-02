@@ -96,13 +96,39 @@ class MenuCharacter extends FlxSprite
 				offset.set(60, -70);
 
 			case 'tankman':
-				offset.set(50, 50);
+				offset.set(50, -30);
 
 			case 'matt':
-				offset.set(20, 30);
+				offset.set(140, 30);
 				
 			case 'garcello':
-				offset.set(120, 100);
+				offset.set(120, 34);
+		}
+
+		switch(character)
+		{
+			case 'bf':
+				scale.set(1, 1);
+			case 'gf':
+				scale.set(1, 1);
+			case 'dad':
+				scale.set(1, 1);
+			case 'spooky':
+				scale.set(1, 1);
+			case 'pico':
+				scale.set(1, 1);
+			case 'mom':
+				scale.set(1, 1);
+			case 'parents-christmas':
+				scale.set(1, 1);
+			case 'senpai':
+				scale.set(1, 1);
+			case 'tankman':
+				scale.set(1, 1);
+			case 'matt':
+				scale.set(0.6, 0.6);
+			case 'garcello':
+				scale.set(0.57, 0.57);
 		}
 	}
 }

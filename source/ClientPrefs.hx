@@ -194,7 +194,7 @@ class ClientPrefs {
 			tankmanAscends = FlxG.save.data.tankmanAscends;
 		}
 		if(FlxG.save.data.tankmanDeathLines != null) {
-			tankmanAscends = FlxG.save.data.tankmanAscends;
+			tankmanDeathLines = FlxG.save.data.tankmanDeathLines;
 		}
 
 

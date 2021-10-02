@@ -44,7 +44,8 @@ class StoryMenuState extends MusicBeatState
 		true,   //Sky Week
 		true,   //Hiper Week
 		true,   //Sarvente Week
-		true    //Selever Week
+		true,   //Selever Week
+		true	//Annie Week
 	];
 
 	//It works like this:
@@ -69,6 +70,7 @@ class StoryMenuState extends MusicBeatState
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf']
 	];
 
@@ -89,11 +91,12 @@ class StoryMenuState extends MusicBeatState
 		"Matt is done wiith your shit",
 		"The true Finale",
 		"haha fefe funni",
-		"Smoke 'Em Out Struggle",
+		"Smoke 'Em Out Struggle by Atsuover",
 		"Sky By @bfswifeforever",
 		"Hey, soy Hiper.",
 		"Sarvente",
-		"Selever"
+		"Selever",
+		"Annie by Atsuover"
 	];
 
 	//Background asset name, the background files are stored on assets/preload/menubackgrounds/
@@ -116,6 +119,7 @@ class StoryMenuState extends MusicBeatState
 		'garcello',
 		'template',
 		'philly',
+		'template',
 		'template',
 		'template'
 	];
@@ -178,7 +182,7 @@ class StoryMenuState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("En el menú del Modo Historia", null);
 		#end
 
 		for (i in 0...WeekData.songsNames.length)

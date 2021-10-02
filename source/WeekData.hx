@@ -18,13 +18,14 @@ class WeekData {
 		['Ugh', 'Guns', 'Stress'],	                //Week 7
 		['Light-It-Up', 'Ruckus', 'Target-Practice'],//WiiK 1
 		['Sporting', 'Boxing-Match'],               //WiiK 2
-		['Fisticuffs', 'Wind-Up', 'Deathmatch', 'King-Hit', 'Tko'],//WiiK 3
+		['Fisticuffs', 'Wind-Up', 'Deathmatch', 'King-Hit'],//WiiK 3
 		['King-Hit-Fefe'],                          //WiiK Fefe
 		['Headache', 'Nerves', 'Release', 'Fading'],//Garcello Week
 		['Wife-Forever', 'Sky', 'Manifest'],        //Sky Week
 		['Rap-De-Hiper'],                           //Hiper Week
 		['Parish', 'Worship', 'Zavodila', 'Gospel'],//Sarvente Week
-		['Casanova']                                //Selever Week
+		['Casanova'],                               //Selever Week
+		['Good-Enough', 'Lover', 'Tug-Of-War', 'Animal']//Annie Week
 	];
 
 	// Custom week number, used for your week's score not being overwritten by a new vanilla week when the game updates
@@ -50,7 +51,7 @@ class WeekData {
 		null,   //Sky Week
 		null,   //Hiper Week
 		null,   //Sarvente Week
-		null    //Selever Week
+		null	//Annie Week
 	];
 
 	//Tells which assets directory should it load
@@ -80,7 +81,8 @@ class WeekData {
 		'sky',  //Sky Week
 		'hiper',//Hiper Week
 		'sarv', //Sarvente Week
-		'sarv'  //Selever Week
+		'sarv', //Selever Week
+		'annie' //Annie Week
 	];
 
 	//The only use for this is to display a different name for the Week when you're on the score reset menu.
@@ -107,7 +109,8 @@ class WeekData {
 		null,   //Sky Week
 		null,   //Hiper Week
 		null,   //Sarvente Week
-		null    //Selever Week
+		null,   //Selever Week
+		null	//Annie Week
 	];
 
 

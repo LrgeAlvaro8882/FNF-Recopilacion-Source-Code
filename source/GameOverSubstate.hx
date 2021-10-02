@@ -130,11 +130,9 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var isEnding:Bool = false;
 
-	var daStage = PlayState.curStage;
-
 	function tankmanBruh(?volume:Float = 7):Void
 	{
-		if (daStage == 'tank' || daStage == 'tank-stress')
+		if (PlayState.SONG.player2 == 'tankman')
 		{
 			FlxG.sound.play(Paths.sound('jeffGameover-' + FlxG.random.int(1, 25)), volume);
 		}

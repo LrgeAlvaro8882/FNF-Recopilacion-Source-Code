@@ -209,35 +209,6 @@ class PlayState extends MusicBeatState
 	public var circ2:BGSprite;
 	public var circ1new:BGSprite;
 
-	var ass2:BGSprite;
-	var stageFront2:BGSprite;
-	var stageFront3:BGSprite;
-	var stageFront2Dark:BGSprite;
-	var stageFront3Dark:BGSprite;
-	var bgDark:BGSprite;
-	var machineDark:BGSprite;
-	var miraGradient:BGSprite;
-	var songName:FlxText;
-	var amogus:BGSprite;
-	var dripster:BGSprite;
-	var yellow:BGSprite;
-	var brown:BGSprite;
-	var cloudScroll:FlxTypedGroup<BGSprite>;
-	var farClouds:FlxTypedGroup<BGSprite>;
-	var orb:BGSprite;
-	var crowd:BGSprite;
-
-	private var boom:Bool = false;
-	private var micfight:Bool = false;
-	private var miconet:Bool = false;
-	var mic:BGSprite;
-	var micone:BGSprite;
-	var mimi:BGSprite;
-	var room:BGSprite;
-	var blackshit:BGSprite;
-	var fireshit:BGSprite;
-	private var floatvalve:Float = 0;
-
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -322,7 +293,7 @@ class PlayState extends MusicBeatState
 			else if(WeekData.weekNumber[storyWeek] != null)
 				weekCustomName = 'Week ' + WeekData.weekNumber[storyWeek];
 
-			detailsText = "Story Mode: " + weekCustomName;
+			detailsText = "Modo Historia: " + weekCustomName;
 		}
 		else
 		{
@@ -330,7 +301,7 @@ class PlayState extends MusicBeatState
 		}
 
 		// String for when the game is paused
-		detailsPausedText = "Paused - " + detailsText;
+		detailsPausedText = "Pausado - " + detailsText;
 		#end
 
 		switch (SONG.song.toLowerCase())
@@ -465,6 +436,62 @@ class PlayState extends MusicBeatState
 					phillyCityLightsEvent.add(light);
 				}
 
+			case 'good-enough' | 'lover' | 'tug-of-war':
+				curStage = 'philly-annie';
+	
+				if(!ClientPrefs.lowQuality) {
+					var bg:BGSprite = new BGSprite('sky', -100, 0, 0.1, 0.1);
+					add(bg);
+				}
+	
+				var city:BGSprite = new BGSprite('city', -10, 0, 0.3, 0.3);
+				city.setGraphicSize(Std.int(city.width * 0.85));
+				city.updateHitbox();
+				add(city);
+	
+				phillyCityLights = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLights);
+
+				for (i in 0...5)
+				{
+					var light:BGSprite = new BGSprite('win' + i, city.x, city.y, 0.3, 0.3);
+					light.visible = false;
+					light.setGraphicSize(Std.int(light.width * 0.85));
+					light.updateHitbox();
+					phillyCityLights.add(light);
+				}
+	
+				if(!ClientPrefs.lowQuality) {
+					var streetBehind:BGSprite = new BGSprite('behindTrain', -40, 50);
+					add(streetBehind);
+				}
+	
+				phillyTrain = new BGSprite('train', 2000, 360);
+				add(phillyTrain);
+	
+				trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes-annie'));
+				CoolUtil.precacheSound('train_passes-annie');
+				FlxG.sound.list.add(trainSound);
+	
+				var street:BGSprite = new BGSprite('street', -40, 50);
+				add(street);
+	
+				phillyBlack = new BGSprite(null, 0, 0, 0, 0);
+				phillyBlack.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+				phillyBlack.alpha = 0.0;
+				add(phillyBlack);
+	
+				phillyCityLightsEvent = new FlxTypedGroup<BGSprite>();
+				add(phillyCityLightsEvent);
+				for (i in 0...5)
+				{
+					var light:BGSprite = new BGSprite('win' + i, city.x, city.y, 0.3, 0.3);
+					light.visible = false;
+					light.setGraphicSize(Std.int(light.width * 0.85));
+					light.updateHitbox();
+					phillyCityLightsEvent.add(light);
+				}
+
 			case 'milf' | 'satin-panties' | 'high':
 				curStage = 'limo';
 				defaultCamZoom = 0.9;
@@ -566,6 +593,20 @@ class PlayState extends MusicBeatState
 				add(evilTree);
 
 				var evilSnow:BGSprite = new BGSprite('christmas/evilSnow', -200, 700);
+				add(evilSnow);
+
+			case 'animal':
+				curStage = 'mallEvil-annie';
+				defaultCamZoom = 0.9;
+				var bg:BGSprite = new BGSprite('evilBG', -400, -500, 0.2, 0.2);
+				bg.setGraphicSize(Std.int(bg.width * 0.8));
+				bg.updateHitbox();
+				add(bg);
+	
+				var evilTree:BGSprite = new BGSprite('evilTree', 300, -300, 0.2, 0.2);
+				add(evilTree);
+	
+				var evilSnow:BGSprite = new BGSprite('evilSnow', -200, 700);
 				add(evilSnow);
 
 			case 'rap-de-la-marmota':
@@ -1166,133 +1207,6 @@ class PlayState extends MusicBeatState
 				pillars.active = false;
 				add(pillars);
 
-			case 'sussus-moogus' | 'sabotage' | 'meltdown':
-				curStage = 'polus';
-				defaultCamZoom = 0.9;  
-
-				var sky:BGSprite = new BGSprite('polus/polusSky', -834.3, -620.5, 0.5, 0.5);
-				sky.active = false;
-				add(sky);		
-	
-				var rocks:BGSprite = new BGSprite('polus/polusrocks', -915.8, -411.3, 0.6, 0.6);
-				rocks.updateHitbox();
-				rocks.active = false;
-				add(rocks);	
-				
-				var hills:BGSprite = new BGSprite('polus/polusHills', -1238.05, -180.55, 0.9, 0.9);
-				hills.updateHitbox();
-				hills.active = false;
-				add(hills);
-
-				var warehouse:BGSprite = new BGSprite('polus/polusWarehouse', -458.35, -315.6, 0.9, 0.9);
-				warehouse.updateHitbox();
-				warehouse.active = false;
-				add(warehouse);
-
-				var crowd:BGSprite = new BGSprite('polus/CrowdBop', -280.5, 240.8, 1, 1, ['CrowdBop'], false);
-				crowd.updateHitbox();
-				crowd.scale.set(1.5, 1.5);
-				if(SONG.song.toLowerCase() == 'meltdown') {
-					add(crowd);
-				}
-
-			case 'sussus-toogus' | 'lights-out':
-				defaultCamZoom = 0.85;
-				curStage = 'toogus';
-				var bg:BGSprite = new BGSprite('Mira', 0, 50, 1, 1);
-				bg.setGraphicSize(Std.int(bg.width * 1.4));
-				bg.active = false;
-				add(bg);
-
-				bgDark = new BGSprite('MiraDark', 0, 50, 1, 1);
-				bgDark.setGraphicSize(Std.int(bgDark.width * 1.4));
-				bgDark.active = false;
-				bgDark.alpha = 0;
-				add(bgDark);
-
-				var stageFront:BGSprite = new BGSprite('vending_machine', 1000, 150, 1, 1);
-				stageFront.updateHitbox();
-				stageFront.active = false;
-				add(stageFront);
-
-				machineDark = new BGSprite('vending_machineDark', 1000, 150, 1, 1);
-				machineDark.updateHitbox();
-				machineDark.active = false;
-				machineDark.alpha = 0;
-				add(machineDark);
-				
-				var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
-				stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-				stageCurtains.updateHitbox();	
-				stageCurtains.active = false;
-		
-				//	add(stageCurtains);
-
-				case 'reactor':
-				defaultCamZoom = 0.5;
-				curStage = 'reactor';
-				var bg:BGSprite = new BGSprite('reactor/reactor background', -2300, -1700, 1, 1);
-				bg.setGraphicSize(Std.int(bg.width * 0.7));
-				bg.active = false;
-				add(bg);
-
-				yellow = new BGSprite('reactor/susBoppers', -400, 150, 1, 1, ['yellow sus'], false);
-				yellow.setGraphicSize(Std.int(yellow.width * 0.7));
-				yellow.active = true;
-				add(yellow);
-
-				var pillar1:BGSprite = new BGSprite('reactor/back pillars', -2300, -1700, 1, 1);
-				pillar1.setGraphicSize(Std.int(pillar1.width * 0.7));
-				pillar1.active = false;
-				add(pillar1);
-
-				dripster = new BGSprite('reactor/susBoppers', 1375, 150, 1, 1, ['blue sus'], false);
-				dripster.setGraphicSize(Std.int(dripster.width * 0.7));
-				dripster.active = true;
-				add(dripster);
-
-				var pillar2:BGSprite = new BGSprite('reactor/middle pillars', -2300, -1700, 1, 1);
-				pillar2.setGraphicSize(Std.int(pillar2.width * 0.7));
-				pillar2.active = false;
-				add(pillar2);
-
-				amogus = new BGSprite('reactor/susBoppers', 1670, 250, 1, 1, ['white sus'], false);
-				amogus.setGraphicSize(Std.int(amogus.width * 0.7));
-				amogus.active = true;
-				add(amogus);
-
-				brown = new BGSprite('reactor/susBoppers', -850, 190, 1, 1);
-				brown.setGraphicSize(Std.int(brown.width * 0.7));
-				brown.active = true;
-				add(brown);
-
-				var pillar3:BGSprite = new BGSprite('reactor/front pillars', -2300, -1700, 1, 1);
-				pillar3.setGraphicSize(Std.int(pillar3.width * 0.7));
-				pillar3.active = false;
-				add(pillar3);
-
-				orb = new BGSprite('reactor/ball of big ol energy', -460, -1300, 1, 1);
-				orb.setGraphicSize(Std.int(orb.width * 0.7));
-				orb.active = false;
-				add(orb);
-
-				var cranes:BGSprite = new BGSprite('reactor/upper cranes', -735, -1500, 1, 1);
-				cranes.setGraphicSize(Std.int(cranes.width * 0.7));
-				cranes.active = false;
-				add(cranes);
-
-				var console1:BGSprite = new BGSprite('reactor/center console', -260, 150, 1, 1);
-				console1.setGraphicSize(Std.int(console1.width * 0.7));
-				console1.active = false;
-				add(console1);
-
-				var console2:BGSprite = new BGSprite('reactor/side console', -1380, 450, 1, 1);
-				console2.setGraphicSize(Std.int(console2.width * 0.7));
-				console2.active = false;
-				add(console2);				
-		
-				//	add(stageCurtains);
-
 			case 'defeat':
 				defaultCamZoom = 0.9;
 				curStage = 'defeat';
@@ -1514,6 +1428,10 @@ class PlayState extends MusicBeatState
 				add(tank4);
 				add(tank5);
 				add(tank3);
+			case 'garAlleyDead':
+				var smoke:BGSprite = new BGSprite('garSmoke', 0, 0, 1.1, 1.1, ['smokey'], true);
+				smoke.setGraphicSize(Std.int(smoke.width * 1.6));
+				add(smoke);
 		}
 
 		foregroundGroup = new FlxTypedGroup<FlxSprite>();
@@ -2777,7 +2695,7 @@ class PlayState extends MusicBeatState
 			MusicBeatState.switchState(new ChartingState());
 
 			#if desktop
-			DiscordClient.changePresence("Chart Editor", null, null, true);
+			DiscordClient.changePresence("Menú Debug", null, null, true);
 			#end
 		}
 
@@ -4528,6 +4446,39 @@ class PlayState extends MusicBeatState
 				}
 			}
 		}
+
+		if(curSong == 'Fading')
+		{
+			switch(curStep)
+			{
+				case 224:
+					FlxTween.tween(FlxG.camera, {zoom: 1}, 1);
+				case 228:
+					FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1);
+				case 232:
+					FlxTween.tween(FlxG.camera, {zoom: 1.1}, 1);
+				case 236:
+					FlxTween.tween(FlxG.camera, {zoom: 1.15}, 1);
+				case 240:
+					FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1);
+				case 244:
+					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 1);
+				case 248:
+					FlxTween.tween(FlxG.camera, {zoom: 1.3}, 1);
+				case 252:
+					FlxTween.tween(FlxG.camera, {zoom: 1.35}, 0.75);
+			}
+		}
+
+		if(curSong == 'Zavodila' && curStep > 128 && curStep < 200 && dad.curCharacter.contains('ruv') && dad.animation.curAnim.name.startsWith('sing'))
+		{
+			FlxG.camera.shake(0.03, 0.1);
+			
+			if (gf.animOffsets.exists('scared'))
+			{
+				gf.playAnim('scared', true);
+			}
+		}
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -4683,8 +4634,6 @@ class PlayState extends MusicBeatState
 			case 'nyaw':
 				upperBoppers.dance();
 				bottomBoppers.dance();
-			case 'meltdown':
-				crowd.dance();
 		}
 
 		if (curStage == 'spooky' && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)

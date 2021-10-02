@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				1,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "monster idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				61
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "monster up note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-49,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Monster left note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Monster Right note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-49,
+				-108
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "monster down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Annie_Drunk",
+	"position": [
+		0,
+		50
+	],
+	"healthicon": "annie-drunk",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		127
+	],
+	"camera_position": [
+		-140,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

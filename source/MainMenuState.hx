@@ -40,7 +40,7 @@ class MainMenuState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("En el menú principal", null);
 		#end
 
 		camGame = new FlxCamera();
