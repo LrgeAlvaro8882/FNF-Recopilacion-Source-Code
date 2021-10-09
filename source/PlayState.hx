@@ -209,6 +209,13 @@ class PlayState extends MusicBeatState
 	public var circ2:BGSprite;
 	public var circ1new:BGSprite;
 
+	var clones:BGSprite;
+	var edd:BackgroundE;
+	var tom:BackgroundT;
+
+	var stageFront:BGSprite;
+	var stageFront2:BGSprite;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -1213,6 +1220,89 @@ class PlayState extends MusicBeatState
 				var defeat:BGSprite = new BGSprite('defeatfnf', 0, 100, 1, 1);		
 				defeat.setGraphicSize(Std.int(defeat.width * 2));
 				add(defeat);
+
+			case 'arch':
+				defaultCamZoom = 1;
+				curStage = 'arch';
+
+			case 'kitchen-shelf' | 'face':
+				defaultCamZoom = 0.8;
+				curStage = 'mattroom';
+				var bg:BGSprite = new BGSprite('bedroomwall', -530, -452, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 0.85));
+				bg.active = false;
+				add(bg);
+	
+				var brfloor:BGSprite = new BGSprite('bedroomfloor', -650, -290, 0.9, 0.9);
+				brfloor.setGraphicSize(Std.int(brfloor.width * 0.7));
+				brfloor.active = false;
+				add(brfloor);
+	
+				var bgjunk:BGSprite = new BGSprite('backgroundjunk', -350, -50, 0.9, 0.9);
+				bgjunk.scale.set(0.8, 0.8);
+				bgjunk.active = false;
+				add(bgjunk);
+
+			case 'reflection':
+				defaultCamZoom = 0.65;
+				curStage = 'mattscastle';
+				var bg:BGSprite = new BGSprite('castle_bg', -970, -452, 0.9, 0.9);
+				bg.active = false;
+				add(bg);
+
+				var castlefloor:BGSprite = new BGSprite('castle_floor', -780, 800, 0.9, 0.9);
+				castlefloor.setGraphicSize(Std.int(castlefloor.width * 0.8));
+				castlefloor.active = false;
+				add(castlefloor);
+
+				var cpoles:BGSprite = new BGSprite('poles_ig', -530, -690, 0.9, 0.9);
+				cpoles.setGraphicSize(Std.int(cpoles.width * 0.9));
+				cpoles.active = false;
+				add(cpoles);
+
+				var cloth:BGSprite = new BGSprite('behind_cloth', -610, -662, 0.9, 0.9);
+				cloth.active = false;
+				add(cloth);
+
+				clones = new BGSprite('clone_fucks', 32, 105, 0.9, 0.9, ['clones istanza 1'], false);
+				clones.updateHitbox();
+				add(clones);
+
+				edd = new BackgroundE(300, 160);
+				edd.scrollFactor.set(0.9, 0.9);
+				edd.updateHitbox();
+				add(edd);
+
+				tom = new BackgroundT(890, 255);
+				tom.scrollFactor.set(1.0, 1.0);
+				tom.updateHitbox();
+				add(tom);
+
+				/*edd = new FlxSprite(-150, -50);
+					edd.frames = Paths.getSparrowAtlas('totally_not_edd');
+					edd.animation.addByPrefix('bop', 'edd idle animation', 24, false);
+					edd.antialiasing = true;
+					edd.scrollFactor.set(0.9, 0.9);
+					edd.updateHitbox();
+					add(edd);
+
+					tom = new FlxSprite(150, -50);
+					tom.frames = Paths.getSparrowAtlas('totally_not_tom');
+					tom.animation.addByPrefix('bop', 'tom idle animation', 24, false);
+					tom.antialiasing = true;
+					tom.scrollFactor.set(0.9, 0.9);
+					tom.updateHitbox();
+					add(tom); */
+
+			case 'gimme-a-break' | 'man-on-stilts' | 'knock-knock':
+				defaultCamZoom = 0.9;
+				curStage = 'cg5stage';
+		
+				bg = new BGSprite('mixroom', -535, -166, 1, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 0.9));
+				bg.updateHitbox();
+				bg.active = false;
+				add(bg);
 			
 			default:
 				defaultCamZoom = 0.9;
@@ -1278,6 +1368,12 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-mii';
 				case 'wocky' | 'beathoven' | 'hairball' | 'nyaw' | 'nyawclosed':
 					gfVersion = 'gf-kapi';
+				case 'arch':
+					gfVersion = 'gf-demona';
+				case 'mattscastle':
+					gfVersion = 'gf-weekm';
+				case 'cg5stage':
+					gfVersion = 'gf-cg5';
 				default:
 					gfVersion = 'gf';
 			}
@@ -1360,6 +1456,22 @@ class PlayState extends MusicBeatState
 				BF_Y += 100;
 			case 'defeat':
 				GF_X -= 2000;
+			case 'arch':
+				BF_X = 798.8;
+				BF_Y = 40.6;
+				GF_X = 300;
+				GF_Y = -194.7;
+			case 'mattroom':
+				BF_X += 150;
+			case 'mattscastle':
+				BF_X += 300;
+				BF_Y += 300;
+				GF_Y += 150;
+			case 'cg5stage':
+				BF_X += 100;
+				BF_Y += 100;
+				DAD_X -= 50;
+				DAD_Y += 100;
 		}
 
 		gf = new Character(GF_X, GF_Y, gfVersion);
@@ -1408,13 +1520,23 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'limo':
+				add(limo);
 			case 'churchruv':
 				add(pillarbroke);
-		}
+			case 'cg5stage':
+				stageFront = new BGSprite('recordroom', -507, -117, 1, 0.9);
+				stageFront.active = false;
+				stageFront.setGraphicSize(Std.int(stageFront.width * 0.9));
+				stageFront.updateHitbox();
+				add(stageFront);
 
-		// Shitty layering but whatev it works LOL
-		if (curStage == 'limo')
-			add(limo);
+				stageFront2 = new BGSprite('lights', -507, -117, 1, 0.9);
+				stageFront2.active = false;
+				stageFront2.setGraphicSize(Std.int(stageFront2.width * 0.9));
+				stageFront2.updateHitbox();
+				add(stageFront2);
+		}
 
 		add(dadGroup);
 		add(boyfriendGroup);
@@ -1432,6 +1554,14 @@ class PlayState extends MusicBeatState
 				var smoke:BGSprite = new BGSprite('garSmoke', 0, 0, 1.1, 1.1, ['smokey'], true);
 				smoke.setGraphicSize(Std.int(smoke.width * 1.6));
 				add(smoke);
+			case 'mattroom':
+				var frjunk:BGSprite = new BGSprite('BG_foreground junk', -600, 150, 1.2, 1.2);
+				frjunk.active = false;
+				add(frjunk);
+			case 'mattscastle':
+				var mstuff:BGSprite = new BGSprite('kingstuffidk', -940, -713, 0.9, 0.9);
+				mstuff.active = false;
+				add(mstuff);
 		}
 
 		foregroundGroup = new FlxTypedGroup<FlxSprite>();
@@ -3531,6 +3661,12 @@ class PlayState extends MusicBeatState
 				case 'school' | 'schoolEvil':
 					camFollow.x = boyfriend.getMidpoint().x - 200;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
+				case 'mattroom':
+					camFollow.x = boyfriend.getMidpoint().x - 400;
+					camFollow.y = boyfriend.getMidpoint().y - 300;
+				case 'mattscastle':
+					camFollow.x = boyfriend.getMidpoint().x - 300;
+					camFollow.y = boyfriend.getMidpoint().y - 300;
 			}
 			camFollow.x -= boyfriend.cameraPosition[0];
 			camFollow.y += boyfriend.cameraPosition[1];
@@ -4390,37 +4526,39 @@ class PlayState extends MusicBeatState
 		setOnLuas('curStep', curStep);
 		callOnLuas('onStepHit', []);
 
-		if (SONG.song.toLowerCase() == 'fading')
+		if (curSong == 'fading' && curStep == 240)
 		{
-			if (curStep == 240)
+			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				new FlxTimer().start(0.1, function(tmr:FlxTimer)
-				{
-					dad.alpha -= 0.05;
-					iconP2.alpha -= 0.05;
+				dad.alpha -= 0.05;
+				iconP2.alpha -= 0.05;
 	
-					if (dad.alpha > 0)
-					{
-						tmr.reset(0.1);
-					}
-				});
-			}
+				if (dad.alpha > 0)
+				{
+					tmr.reset(0.1);
+				}
+			});
 		}
 
-		if(SONG.song.toLowerCase() == 'Foolhardy')
+		if(curSong == 'Foolhardy')
 		{
-			switch(curStep)
+			if(curStep == 2427 || curStep == 2428 || curStep == 2429 || curStep == 2430)
 			{
-				case 2426:
-					var zardybg = new BGSprite('Maze', -600, -200, 0.9, 0.9, ['Stage'], true);
-				case 2427 | 2428 | 2429 | 2430:
-					FlxG.camera.shake(0.05);
-					dad.alpha -= 0.05;
-				case 2432 | 2434 | 2435 | 2436 | 2437 | 2438 | 2439 | 2440:
-					dad.alpha = 0.6;
-					FlxG.camera.stopFX();
-				case 2943 | 2946 | 2948 | 2950 | 2452 | 2454:
-					dad.alpha -= 0.2;
+				FlxG.camera.shake(0.05);
+				dad.alpha -= 0.05;
+			}
+
+			if(curStep == 2432 || curStep == 2434 || curStep == 2435 || curStep == 2436 || curStep == 2437 || curStep == 2438 || curStep == 2439 || curStep == 2440)
+			{
+				dad.alpha = 0.6;
+				iconP2.alpha = 0.6;
+				FlxG.camera.stopFX();
+			}
+
+			if(curStep == 2943 || curStep == 2946 || curStep == 2948 || curStep == 2950 || curStep == 2452 || curStep == 2454)
+			{
+				dad.alpha -= 0.2;
+				iconP2.alpha -= 0.2;
 			}
 		}
 
@@ -4472,11 +4610,51 @@ class PlayState extends MusicBeatState
 
 		if(curSong == 'Zavodila' && curStep > 128 && curStep < 200 && dad.curCharacter.contains('ruv') && dad.animation.curAnim.name.startsWith('sing'))
 		{
-			FlxG.camera.shake(0.03, 0.1);
+			FlxG.camera.shake(0.03);
 			
 			if (gf.animOffsets.exists('scared'))
 			{
 				gf.playAnim('scared', true);
+			}
+		}
+
+		if(ClientPrefs.camZooms)
+		{
+			if(curSong == 'Stress')
+			{
+				switch(curStep)
+				{
+					case 736 | 740 | 744 | 748 | 752 | 756 | 757:
+						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1, {
+							ease: FlxEase.expoOut
+						});	
+				}
+			}
+		}
+		else if(!ClientPrefs.camZooms)
+		{
+			if(curSong == 'Stress')
+			{
+				switch(curStep)
+				{
+					case 736 | 740 | 744 | 748 | 752 | 756 | 757:
+						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1, {
+							ease: FlxEase.expoOut
+						});	
+				}
+			}
+		}
+
+		if(curSong == 'Reflection')
+		{
+			switch(curStep)
+			{
+				case 864 | 870 | 874 | 878 | 882 | 886:
+					FlxTween.tween(FlxG.camera, {zoom: 1.22}, 1, {
+						ease: FlxEase.expoOut
+					});
+				case 896:
+					FlxG.camera.shake(0.019);
 			}
 		}
 	}
@@ -4516,25 +4694,25 @@ class PlayState extends MusicBeatState
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 
 		if (curSong.toLowerCase() == 'king-hit' && curBeat == 31)
-			{
-				FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
-									ease: FlxEase.quadInOut,
-						});
-			}
-			
-			if (curSong.toLowerCase() == 'wind-up' && curBeat == 222)
-			{
-				FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
-									ease: FlxEase.quadInOut,
-						});
-			}
+		{
+			FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
+								ease: FlxEase.quadInOut,
+					});
+		}
+		
+		if (curSong.toLowerCase() == 'wind-up' && curBeat == 222)
+		{
+			FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
+								ease: FlxEase.quadInOut,
+					});
+		}
 	
-			if (curSong.toLowerCase() == 'king-hit-fefe' && curBeat == 31)
-			{
-				FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
-									ease: FlxEase.quadInOut,
-						});
-			}
+		if (curSong.toLowerCase() == 'king-hit-fefe' && curBeat == 31)
+		{
+			FlxTween.tween(FlxG.camera, {zoom: 1}, .5, {
+								ease: FlxEase.quadInOut,
+					});
+		}
 
 		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0)
 		{
@@ -4634,6 +4812,10 @@ class PlayState extends MusicBeatState
 			case 'nyaw':
 				upperBoppers.dance();
 				bottomBoppers.dance();
+			case 'mattscastle':
+				clones.dance();
+				edd.dance();
+				tom.dance();
 		}
 
 		if (curStage == 'spooky' && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)

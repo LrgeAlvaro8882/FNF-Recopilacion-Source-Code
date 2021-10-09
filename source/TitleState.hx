@@ -311,7 +311,7 @@ class TitleState extends MusicBeatState
 			}
 			else if (!ClientPrefs.newMusicMenu)
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu-alt'), 0.7);
+				FlxG.sound.play(Paths.sound('fart'), 1.8);
 			}
 
 			transitioning = true;

@@ -72,6 +72,8 @@
 		<library name="sarv"          preload="true" />
 		<library name="impostor"      preload="true" />
 		<library name="annie"         preload="true" />
+		<library name="weekm"         preload="true" />
+		<library name="cg5"           preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
@@ -94,6 +96,8 @@
 		<library name="sarv"          preload="false" />
 		<library name="impostor"      preload="false" />
 		<library name="annie"         preload="false" />
+		<library name="weekm"         preload="false" />
+		<library name="cg5"           preload="false" />
 	</section>
 	
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
@@ -134,6 +138,10 @@
 	<assets path="assets/impostor"      library="impostor"      exclude="*.mp3" unless="web"/>
 	<assets path="assets/annie"         library="annie"         exclude="*.ogg" if="web"/>
 	<assets path="assets/annie"         library="annie"         exclude="*.mp3" unless="web"/>
+	<assets path="assets/weekm"         library="weekm"         exclude="*.ogg" if="web"/>
+	<assets path="assets/weekm"         library="weekm"         exclude="*.mp3" unless="web"/>
+	<assets path="assets/cg5"           library="cg5"           exclude="*.ogg" if="web"/>
+	<assets path="assets/cg5"           library="cg5"           exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />

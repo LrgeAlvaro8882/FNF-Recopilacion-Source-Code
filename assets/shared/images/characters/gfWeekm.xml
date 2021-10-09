@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gfWeekm.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gf n matt boombox0000" x="0" y="0" width="843" height="656" frameX="0" frameY="-32" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0001" x="0" y="0" width="843" height="656" frameX="0" frameY="-32" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0002" x="843" y="0" width="841" height="658" frameX="0" frameY="-30" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0003" x="1684" y="0" width="841" height="658" frameX="0" frameY="-30" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0004" x="2525" y="0" width="841" height="667" frameX="0" frameY="-21" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0005" x="0" y="667" width="841" height="667" frameX="0" frameY="-21" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0006" x="841" y="667" width="842" height="669" frameX="0" frameY="-19" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0007" x="1683" y="667" width="855" height="676" frameX="0" frameY="-12" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0008" x="2538" y="667" width="855" height="677" frameX="0" frameY="-11" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0009" x="0" y="1344" width="855" height="677" frameX="0" frameY="-11" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0010" x="855" y="1344" width="856" height="680" frameX="0" frameY="-8" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0011" x="1711" y="1344" width="856" height="680" frameX="0" frameY="-8" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0012" x="2567" y="1344" width="856" height="684" frameX="0" frameY="-4" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0013" x="0" y="2028" width="856" height="684" frameX="0" frameY="-4" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0014" x="856" y="2028" width="856" height="686" frameX="0" frameY="-2" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0015" x="1712" y="2028" width="858" height="686" frameX="0" frameY="-2" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0016" x="1712" y="2028" width="858" height="686" frameX="0" frameY="-2" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0017" x="2570" y="2028" width="859" height="685" frameX="0" frameY="-3" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0018" x="0" y="2714" width="859" height="685" frameX="0" frameY="-3" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0019" x="859" y="2714" width="858" height="685" frameX="0" frameY="-3" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0020" x="1717" y="2714" width="858" height="685" frameX="0" frameY="-3" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0021" x="2575" y="2714" width="857" height="688" frameX="0" frameY="0" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0022" x="0" y="3402" width="862" height="688"/>
+	<SubTexture name="gf n matt boombox0023" x="862" y="3402" width="862" height="683" frameX="0" frameY="-5" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0024" x="862" y="3402" width="862" height="683" frameX="0" frameY="-5" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0025" x="1724" y="3402" width="861" height="681" frameX="0" frameY="-7" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0026" x="2585" y="3402" width="861" height="681" frameX="0" frameY="-7" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0027" x="0" y="4090" width="861" height="681" frameX="0" frameY="-7" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0028" x="861" y="4090" width="861" height="681" frameX="0" frameY="-7" frameWidth="862" frameHeight="688"/>
+	<SubTexture name="gf n matt boombox0029" x="1722" y="4090" width="861" height="672" frameX="0" frameY="-16" frameWidth="862" frameHeight="688"/>
+</TextureAtlas>

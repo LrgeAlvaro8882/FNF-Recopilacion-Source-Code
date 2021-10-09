@@ -12,6 +12,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.effects.FlxFlicker;
 import flixel.tweens.FlxTween;
 import lime.utils.Assets;
 import flixel.system.FlxSound;
@@ -28,7 +29,7 @@ class FreeplayState extends MusicBeatState
 		['pico'],							//Week 3
 		['mom'],							//Week 4
 		['parents', 'parents', 'monster'],	//Week 5
-		['senpai', 'senpai', 'spirit'],		//Week 6
+		['senpai', 'senpai-angry', 'spirit'],//Week 6
 		['carol'],							//Carol Week
 		['zardy'],                          //Zardy Week
 		['tord', 'tordbot'],                //Tord Week
@@ -40,9 +41,12 @@ class FreeplayState extends MusicBeatState
 		['garcello', 'garcellotired', 'garcellodead', 'garcelloghosty'],//Garcello Week
 		['sky', 'sky', 'sky-mad'],          //Sky Week
 		['dorkan', 'marmota'],              //Hiper Week
-		['sarvente', 'sarvente-dark', 'ruv', 'sarvente-lucifer'],//Sarvente Week
+		['sarvente', 'sarvente', 'ruv', 'sarvente-lucifer'],//Sarvente Week
 		['selever'],                        //Selever Week
-		['annie', 'annie', 'annie', 'annie-drunk']//Annie Week
+		['annie', 'annie', 'annie', 'annie-drunk'],//Annie Week
+		['arch'],							//ARCH Week
+		['matt-eddsworld', 'matt-eddsworld', 'matt-king'],//Matt Eddsworld Week
+		['cg5']								//CG5 Week
 	];
 
 	var songs:Array<SongMetadata> = [];
@@ -253,6 +257,7 @@ class FreeplayState extends MusicBeatState
 
 		if (controls.BACK)
 		{
+			FlxG.sound.play(Paths.sound('cancelMenu'));
 			if(colorTween != null) {
 				colorTween.cancel();
 			}
@@ -295,6 +300,14 @@ class FreeplayState extends MusicBeatState
 
 			PlayState.storyWeek = songs[curSelected].week;
 			trace('CURRENT WEEK: ' + WeekData.getCurrentWeekNumber());
+			if(ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+			}
+			else if(!ClientPrefs.newMusicMenu)
+			{
+				FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+			}
 			if(colorTween != null) {
 				colorTween.cancel();
 			}

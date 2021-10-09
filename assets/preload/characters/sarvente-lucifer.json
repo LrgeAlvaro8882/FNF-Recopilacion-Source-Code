@@ -1,48 +1,48 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				41,
 				10
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "LuciferSarvLeft",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LuciferSarvLeft"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				35,
 				40
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "LuciferSarvDown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "LuciferSarvDown"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				39,
 				8
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "LuciferSarvUp",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "LuciferSarvUp"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				62,
 				42
 			],
-			"loop": false,
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "LuciferSarvRight",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LuciferSarvRight"
 		},
 		{
 			"offsets": [
@@ -50,7 +50,7 @@
 				0
 			],
 			"indices": [],
-			"fps": 10,
+			"fps": 9,
 			"anim": "idle",
 			"loop": true,
 			"name": "LuciferSarvIdle"
@@ -60,7 +60,7 @@
 	"image": "characters/SarventeLucifer",
 	"position": [
 		50,
-		-70
+		-320
 	],
 	"healthicon": "sarvente-lucifer",
 	"flip_x": false,

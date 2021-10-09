@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="clone_fucks.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="clones istanza 10000" x="0" y="0" width="2328" height="722" frameX="-46" frameY="-130" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10001" x="0" y="0" width="2328" height="722" frameX="-46" frameY="-130" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10002" x="0" y="0" width="2328" height="722" frameX="-46" frameY="-130" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10003" x="0" y="722" width="2397" height="852"/>
+	<SubTexture name="clones istanza 10004" x="0" y="722" width="2397" height="852"/>
+	<SubTexture name="clones istanza 10005" x="0" y="722" width="2397" height="852"/>
+	<SubTexture name="clones istanza 10006" x="0" y="1574" width="2364" height="780" frameX="-25" frameY="-72" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10007" x="0" y="1574" width="2364" height="780" frameX="-25" frameY="-72" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10008" x="0" y="1574" width="2364" height="780" frameX="-25" frameY="-72" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10009" x="0" y="2354" width="2364" height="800" frameX="-25" frameY="-52" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10010" x="0" y="2354" width="2364" height="800" frameX="-25" frameY="-52" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10011" x="0" y="2354" width="2364" height="800" frameX="-25" frameY="-52" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10012" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10013" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10014" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10015" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10016" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10017" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10018" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10019" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10020" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10021" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10022" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10023" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10024" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10025" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10026" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10027" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10028" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+	<SubTexture name="clones istanza 10029" x="0" y="3154" width="2364" height="794" frameX="-25" frameY="-58" frameWidth="2397" frameHeight="852"/>
+</TextureAtlas>

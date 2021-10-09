@@ -45,7 +45,10 @@ class StoryMenuState extends MusicBeatState
 		true,   //Hiper Week
 		true,   //Sarvente Week
 		true,   //Selever Week
-		true	//Annie Week
+		true,	//Annie Week
+		true,   //ARCH Week
+		true,	//Matt Eddsworld Week
+		true	//CG5 Week
 	];
 
 	//It works like this:
@@ -71,6 +74,9 @@ class StoryMenuState extends MusicBeatState
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf']
 	];
 
@@ -83,7 +89,7 @@ class StoryMenuState extends MusicBeatState
 		"MOMMY MUST MURDER",
 		"RED SNOW",
 		"hating simulator ft. moawling",
-		"Carol",
+		"Carol by bbpanzu",
 		"Foolhardy",
 		"Tord (Eddsworld)",
 		"TANKMAN",
@@ -96,7 +102,10 @@ class StoryMenuState extends MusicBeatState
 		"Hey, soy Hiper.",
 		"Sarvente",
 		"Selever",
-		"Annie by Atsuover"
+		"Annie by Atsuover",
+		"ARCH the hacker. By bbpanzu",
+		"Matt (Eddsworld)",
+		"CG5"
 	];
 
 	//Background asset name, the background files are stored on assets/preload/menubackgrounds/
@@ -119,6 +128,9 @@ class StoryMenuState extends MusicBeatState
 		'garcello',
 		'template',
 		'philly',
+		'template',
+		'template',
+		'template',
 		'template',
 		'template',
 		'template'

@@ -31,6 +31,8 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'bfmii';
 			case 'alvaro' | 'alvaro-reanimated' | 'alvaro-car-reanimated':
 				daBf = 'alvaro';
+			case 'bb':
+				daBf = 'bbdead';
 			default:
 				daBf = 'bf';
 		}

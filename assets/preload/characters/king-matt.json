@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				52,
+				7
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "king matt left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				7
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "king matt down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				7
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "king matt up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				7
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "king matt right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				7
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "king matt idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				7
+			],
+			"loop": false,
+			"anim": "jump",
+			"fps": 24,
+			"name": "king matt jump",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/king_matt_assets",
+	"position": [
+		-200,
+		130
+	],
+	"healthicon": "matt-king",
+	"flip_x": false,
+	"healthbar_colors": [
+		72,
+		28,
+		115
+	],
+	"camera_position": [
+		110,
+		-40
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

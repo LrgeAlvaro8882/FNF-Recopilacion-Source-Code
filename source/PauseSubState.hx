@@ -12,6 +12,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 
 class PauseSubState extends MusicBeatSubstate
 {
@@ -145,6 +146,14 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.storyDifficulty = curSelected;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 					PlayState.changedDifficulty = true;
 					PlayState.cpuControlled = false;
 					return;
@@ -154,21 +163,55 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resumir":
+					FlxG.sound.play(Paths.sound('cancelMenu'));
 					close();
 				case 'Cambiar dificultad':
 					menuItems = difficultyChoices;
 					regenMenu();
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 				case 'Modo Practica':
 					PlayState.practiceMode = !PlayState.practiceMode;
 					PlayState.usedPractice = true;
 					practiceText.visible = PlayState.practiceMode;
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 				case "Reiniciar cancion":
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 				case 'Botplay':
 					PlayState.cpuControlled = !PlayState.cpuControlled;
 					PlayState.usedPractice = true;
 					botplayText.visible = PlayState.cpuControlled;
+					FlxG.sound.play(Paths.sound('gay'));
+					if(ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu'));
+					}
+					else if(!ClientPrefs.newMusicMenu)
+					{
+						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
+					}
 				case "Salir al menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
@@ -177,6 +220,8 @@ class PauseSubState extends MusicBeatSubstate
 					} else {
 						MusicBeatState.switchState(new FreeplayState());
 					}
+					FlxG.sound.play(Paths.sound('gay'));
+					FlxG.sound.play(Paths.sound('cancelMenu'));
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					PlayState.usedPractice = false;
 					PlayState.changedDifficulty = false;
@@ -198,6 +243,8 @@ class PauseSubState extends MusicBeatSubstate
 
 	function changeSelection(change:Int = 0):Void
 	{
+		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+
 		curSelected += change;
 
 		if (curSelected < 0)

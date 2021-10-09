@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-7,
+				7
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "king matt su left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				7
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "king matt su down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				7
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "king matt su up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				7
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "king matt su right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				7
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "king matt stand up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/king matt standing up",
+	"position": [
+		-200,
+		130
+	],
+	"healthicon": "matt-king",
+	"flip_x": false,
+	"healthbar_colors": [
+		72,
+		28,
+		115
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

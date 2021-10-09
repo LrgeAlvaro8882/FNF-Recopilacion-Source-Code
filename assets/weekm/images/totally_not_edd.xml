@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="totally_not_edd.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="edd idle animation istanza 10000" x="0" y="0" width="378" height="761" frameX="0" frameY="-24" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10001" x="0" y="0" width="378" height="761" frameX="0" frameY="-24" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10002" x="378" y="0" width="378" height="769" frameX="0" frameY="-16" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10003" x="378" y="0" width="378" height="769" frameX="0" frameY="-16" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10004" x="756" y="0" width="377" height="771" frameX="-1" frameY="-14" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10005" x="756" y="0" width="377" height="771" frameX="-1" frameY="-14" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10006" x="1133" y="0" width="377" height="773" frameX="-1" frameY="-12" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10007" x="1510" y="0" width="377" height="776" frameX="-1" frameY="-9" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10008" x="1510" y="0" width="377" height="776" frameX="-1" frameY="-9" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10009" x="1510" y="0" width="377" height="776" frameX="-1" frameY="-9" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10010" x="0" y="776" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10011" x="0" y="776" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10012" x="0" y="776" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10013" x="377" y="776" width="377" height="780" frameX="-1" frameY="-5" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10014" x="377" y="776" width="377" height="780" frameX="-1" frameY="-5" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10015" x="754" y="776" width="378" height="781" frameX="0" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10016" x="754" y="776" width="378" height="781" frameX="0" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10017" x="1132" y="776" width="378" height="785"/>
+	<SubTexture name="edd idle animation istanza 10018" x="1132" y="776" width="378" height="785"/>
+	<SubTexture name="edd idle animation istanza 10019" x="1510" y="776" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10020" x="1510" y="776" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10021" x="0" y="1561" width="377" height="781" frameX="-1" frameY="-4" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10022" x="377" y="1561" width="377" height="780" frameX="-1" frameY="-5" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10023" x="377" y="1561" width="377" height="780" frameX="-1" frameY="-5" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10024" x="377" y="1561" width="377" height="780" frameX="-1" frameY="-5" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10025" x="754" y="1561" width="377" height="779" frameX="-1" frameY="-6" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10026" x="754" y="1561" width="377" height="779" frameX="-1" frameY="-6" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10027" x="754" y="1561" width="377" height="779" frameX="-1" frameY="-6" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10028" x="1131" y="1561" width="377" height="779" frameX="-1" frameY="-6" frameWidth="378" frameHeight="785"/>
+	<SubTexture name="edd idle animation istanza 10029" x="1131" y="1561" width="377" height="779" frameX="-1" frameY="-6" frameWidth="378" frameHeight="785"/>
+</TextureAtlas>

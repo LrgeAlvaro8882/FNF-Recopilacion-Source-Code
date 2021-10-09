@@ -25,7 +25,10 @@ class WeekData {
 		['Rap-De-Hiper'],                           //Hiper Week
 		['Parish', 'Worship', 'Zavodila', 'Gospel'],//Sarvente Week
 		['Casanova'],                               //Selever Week
-		['Good-Enough', 'Lover', 'Tug-Of-War', 'Animal']//Annie Week
+		['Good-Enough', 'Lover', 'Tug-Of-War', 'Animal'],//Annie Week
+		['Arch'],									//ARCH Week
+		['Kitchen-Shelf', 'Face', 'Reflection'],	//Matt Eddsworld Week
+		['Gimme-A-Break', 'Man-On-Stilts', 'Knock-Knock']//CG5 Week
 	];
 
 	// Custom week number, used for your week's score not being overwritten by a new vanilla week when the game updates
@@ -51,7 +54,10 @@ class WeekData {
 		null,   //Sky Week
 		null,   //Hiper Week
 		null,   //Sarvente Week
-		null	//Annie Week
+		null,	//Annie Week
+		null,	//ARCH Week
+		null,	//Matt Eddsworld Week
+		null	//CG5 Week
 	];
 
 	//Tells which assets directory should it load
@@ -82,7 +88,10 @@ class WeekData {
 		'hiper',//Hiper Week
 		'sarv', //Sarvente Week
 		'sarv', //Selever Week
-		'annie' //Annie Week
+		'annie',//Annie Week
+		null,	//ARCH Week
+		'weekm',//Matt Eddsworld Week
+		'cg5'	//CG5 Week
 	];
 
 	//The only use for this is to display a different name for the Week when you're on the score reset menu.
@@ -110,7 +119,10 @@ class WeekData {
 		null,   //Hiper Week
 		null,   //Sarvente Week
 		null,   //Selever Week
-		null	//Annie Week
+		null,	//Annie Week
+		null,	//ARCH Week
+		null,	//Matt Eddsworld Week
+		null	//CG5 Week
 	];
 
 

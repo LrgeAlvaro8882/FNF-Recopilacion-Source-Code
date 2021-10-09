@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				68,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Matt_Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				74,
+				-130
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "matt_down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				-8
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Matt_Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-38,
+				-51
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "matt_right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "matt idle dance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "nopls",
+			"loop": false,
+			"name": "not the face"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Matt_Eddsworld_Assets",
+	"position": [
+		160,
+		50
+	],
+	"healthicon": "matt-eddsworld",
+	"flip_x": false,
+	"healthbar_colors": [
+		170,
+		123,
+		216
+	],
+	"camera_position": [
+		-40,
+		-130
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
