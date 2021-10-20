@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				17,
+				-44
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "PSYCHIC DOWN"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				50
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "PSYCHIC UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-55
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "PSYCHIC RIGHT"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "PSYCHIC IDLE"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				16,
+				5
+			],
+			"anim": "ability",
+			"fps": 24,
+			"name": "PSYCHIC POWERS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				10
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "PSYCHIC left ALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-56
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "PSYCHIC right ALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				50
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "PSYCHIC up ALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				-110
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "PSYCHIC down ALT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-4,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "PSYCHIC LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Psychic",
+	"position": [
+		80,
+		-120
+	],
+	"healthicon": "psychic",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		0,
+		255
+	],
+	"camera_position": [
+		110,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

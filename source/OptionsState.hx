@@ -712,7 +712,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Instant Respawn',
 		'Icon Colors',
 		'Tankman Ascending',
-		'Tankman Death Lines'
+		'Tankman Death Lines',
+		'Info Bar'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -914,6 +915,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Tankman Death Lines':
 						ClientPrefs.tankmanDeathLines = !ClientPrefs.tankmanDeathLines;
+
+					case 'Info Bar':
+						ClientPrefs.infoBar = !ClientPrefs.infoBar;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -1020,7 +1024,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Tankman Ascending':
 				daText = "If checked, Tankman will ascend on Guns.";
 			case 'Tankman Death Lines':
-				daText = "If checked, Tankman will insult you when\nyou die on any of his songs.";
+				daText = "If checked, Tankman will insult you when\nyou die if he's the enemy.";
+			case 'Info Bar':
+				daText = "If checked, the text bar under the health\nbar will appear.";
 		}
 		descText.text = daText;
 
@@ -1118,6 +1124,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.tankmanAscends;
 					case 'Tankman Death Lines':
 						daValue = ClientPrefs.tankmanDeathLines;
+					case 'Info Bar':
+						daValue = ClientPrefs.infoBar;
 				}
 				checkbox.daValue = daValue;
 			}

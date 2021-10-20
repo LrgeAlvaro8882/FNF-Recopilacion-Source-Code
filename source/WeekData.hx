@@ -28,7 +28,10 @@ class WeekData {
 		['Good-Enough', 'Lover', 'Tug-Of-War', 'Animal'],//Annie Week
 		['Arch'],									//ARCH Week
 		['Kitchen-Shelf', 'Face', 'Reflection'],	//Matt Eddsworld Week
-		['Gimme-A-Break', 'Man-On-Stilts', 'Knock-Knock']//CG5 Week
+		['Gimme-A-Break', 'Man-On-Stilts', 'Knock-Knock'],//CG5 Week
+		['Screenplay', 'Parasite', 'A.G.O.T.I'],	//Agoti Week
+		['Psychic', 'Late-Drive'],					//Psychic Week
+		['First-Town', 'Liquated', 'Why-Do-You-Hate-Me', 'Ghost']//Camellia Week
 	];
 
 	// Custom week number, used for your week's score not being overwritten by a new vanilla week when the game updates
@@ -57,7 +60,10 @@ class WeekData {
 		null,	//Annie Week
 		null,	//ARCH Week
 		null,	//Matt Eddsworld Week
-		null	//CG5 Week
+		null,	//CG5 Week
+		null,	//Agoti Week
+		null,	//Psychic Week
+		null	//Camellia Week
 	];
 
 	//Tells which assets directory should it load
@@ -91,7 +97,10 @@ class WeekData {
 		'annie',//Annie Week
 		null,	//ARCH Week
 		'weekm',//Matt Eddsworld Week
-		'cg5'	//CG5 Week
+		'cg5',	//CG5 Week
+		'agoti',//Agoti Week
+		'psychic',//Psychic Week
+		'camellia'//Camellia Week
 	];
 
 	//The only use for this is to display a different name for the Week when you're on the score reset menu.
@@ -122,7 +131,10 @@ class WeekData {
 		null,	//Annie Week
 		null,	//ARCH Week
 		null,	//Matt Eddsworld Week
-		null	//CG5 Week
+		null,	//CG5 Week
+		null,	//Agoti Week
+		null,	//Psychic Week
+		null	//Camellia Week
 	];
 
 

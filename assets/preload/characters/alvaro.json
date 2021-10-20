@@ -64,7 +64,7 @@
 			"fps": 24,
 			"anim": "hey",
 			"indices": [],
-			"name": "BF HEY"
+			"name": "BF HEY!!"
 		},
 		{
 			"offsets": [
@@ -164,6 +164,17 @@
 			"anim": "singRIGHTmiss",
 			"indices": [],
 			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "yeah",
+			"loop": false,
+			"name": "Alvaro YEAH!!"
 		}
 	],
 	"no_antialiasing": false,

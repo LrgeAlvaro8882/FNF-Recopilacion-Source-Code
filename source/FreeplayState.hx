@@ -46,7 +46,10 @@ class FreeplayState extends MusicBeatState
 		['annie', 'annie', 'annie', 'annie-drunk'],//Annie Week
 		['arch'],							//ARCH Week
 		['matt-eddsworld', 'matt-eddsworld', 'matt-king'],//Matt Eddsworld Week
-		['cg5']								//CG5 Week
+		['cg5'],							//CG5 Week
+		['agoti', 'agoti', 'agoti-crazy'],	//Agoti Week
+		['psychic'],						//Psychic Week
+		['camellia']						//Camellia Week
 	];
 
 	var songs:Array<SongMetadata> = [];
@@ -362,6 +365,23 @@ class FreeplayState extends MusicBeatState
 			curSelected = songs.length - 1;
 		if (curSelected >= songs.length)
 			curSelected = 0;
+
+		//LOAD NOT WORKING BACKGROUNDS :(
+		/*switch(songs[curSelected].songName.toUpperCase())
+		{
+			case 'PARISH':
+				bg.loadGraphic(Paths.image('menuDesat-sarv'));
+			case 'WORSHIP':
+				bg.loadGraphic(Paths.image('menuDesat-sarv'));
+			case 'ZAVODILA':
+				bg.loadGraphic(Paths.image('menuDesat-sarv'));
+			case 'GOSPEL':
+				bg.loadGraphic(Paths.image('menuDesat-sarv'));
+			case 'CASANOVA':
+				bg.loadGraphic(Paths.image('menuDesat-sarv'));
+			default:
+				bg.loadGraphic(Paths.image('menuDesat'));
+		}*/
 
 		var newColor:Int = songs[curSelected].color;
 		if(newColor != intendedColor) {

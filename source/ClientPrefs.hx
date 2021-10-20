@@ -32,6 +32,7 @@ class ClientPrefs {
 	public static var iconColors:Bool = true;
 	public static var tankmanAscends:Bool = true;
 	public static var tankmanDeathLines:Bool = true;
+	public static var infoBar:Bool = true;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -94,6 +95,7 @@ class ClientPrefs {
 		FlxG.save.data.iconColors = iconColors;
 		FlxG.save.data.tankmanAscends = tankmanAscends;
 		FlxG.save.data.tankmanDeathLines = tankmanDeathLines;
+		FlxG.save.data.infoBar = infoBar;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -195,6 +197,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.tankmanDeathLines != null) {
 			tankmanDeathLines = FlxG.save.data.tankmanDeathLines;
+		}
+		if(FlxG.save.data.infoBar != null) {
+			infoBar = FlxG.save.data.infoBar;
 		}
 
 

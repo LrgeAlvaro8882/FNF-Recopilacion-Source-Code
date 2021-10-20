@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "bb idle"
+			"fps": 24,
+			"name": "bb idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				2,
+				-2
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "bb left"
+			"fps": 24,
+			"name": "bb left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				-1,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "bb right"
+			"fps": 24,
+			"name": "bb right",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
-				0
+				2
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "bb down"
+			"fps": 24,
+			"name": "bb down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				2,
+				-2
+			],
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "bb left"
+			"fps": 24,
+			"name": "bb left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				-1,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "bb right"
+			"fps": 24,
+			"name": "bb right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				0,
+				2
+			],
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "bb down"
+			"fps": 24,
+			"name": "bb down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
-				0
+				-6
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "bb up"
+			"fps": 24,
+			"name": "bb up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
-				0
+				-6
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUPmiss",
-			"loop": false,
-			"name": "bb up"
+			"fps": 24,
+			"name": "bb up",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

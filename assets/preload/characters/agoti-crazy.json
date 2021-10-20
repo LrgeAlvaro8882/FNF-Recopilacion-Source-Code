@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				148,
+				-61
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Angry_Agoti_Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				76,
+				-122
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Angry_Agoti_Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				113,
+				130
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Angry_Agoti_Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				36,
+				1
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Angry_Agoti_Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Angry_Agoti_Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Agoti_Pillars",
+	"position": [
+		70,
+		90
+	],
+	"healthicon": "agoti-crazy",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		55,
+		55
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

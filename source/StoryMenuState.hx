@@ -48,7 +48,10 @@ class StoryMenuState extends MusicBeatState
 		true,	//Annie Week
 		true,   //ARCH Week
 		true,	//Matt Eddsworld Week
-		true	//CG5 Week
+		true,	//CG5 Week
+		true,	//Agoti Week
+		true,	//Psychic Week
+		true	//Camellia Week
 	];
 
 	//It works like this:
@@ -77,6 +80,9 @@ class StoryMenuState extends MusicBeatState
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['psychic', 'bf', 'gf'],
 		['nothing', 'bf', 'gf']
 	];
 
@@ -105,7 +111,10 @@ class StoryMenuState extends MusicBeatState
 		"Annie by Atsuover",
 		"ARCH the hacker. By bbpanzu",
 		"Matt (Eddsworld)",
-		"CG5"
+		"CG5",
+		"AGOTI",
+		"Psychic",
+		"Camellia"
 	];
 
 	//Background asset name, the background files are stored on assets/preload/menubackgrounds/
@@ -133,6 +142,9 @@ class StoryMenuState extends MusicBeatState
 		'template',
 		'template',
 		'template',
+		'template',
+		'template',
+		'psychic',
 		'template'
 	];
 	
