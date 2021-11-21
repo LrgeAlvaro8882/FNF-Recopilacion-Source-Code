@@ -20,6 +20,7 @@ spirit
 bf-pixel-opponent
 pico-player
 alvaro
+alvaro-opponent
 alvaro-reanimated
 alvaro-car-reanimated
 carol
@@ -101,3 +102,9 @@ agoti-crazy
 gf-rocks
 parasite
 psychic
+camellia
+huggy
+shcarol
+disc-bf
+disc-gf
+hecker

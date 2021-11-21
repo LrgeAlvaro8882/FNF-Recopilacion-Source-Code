@@ -40,8 +40,19 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		switch(name) {
 			case 'bf':
 				char.frames = Paths.getSparrowAtlas('dialogue/BF_Dialogue');
-				char.animation.addByPrefix('talkIdle', 'BFTalk', 24, true); //Dialogue ended
-				char.animation.addByPrefix('talk', 'bftalkloop', 24, true); //During dialogue
+				char.animation.addByPrefix('talkIdle', 'BF0', 24, true); //Dialogue ended
+				char.animation.addByPrefix('talk', 'BF LOOP', 24, true); //During dialogue
+				char.flipX = !char.flipX;
+
+			case '???1':
+				char.frames = Paths.getSparrowAtlas('dialogue/uh_Dialogue');
+				char.animation.addByPrefix('talkIdle', 'GF0', 24, true);
+				char.animation.addByPrefix('talk', 'GF LOOP', 24, true);
+
+			case '???2':
+				char.frames = Paths.getSparrowAtlas('dialogue/hi_Dialogue');
+				char.animation.addByPrefix('talkIdle', 'BF0', 24, true); //Dialogue ended
+				char.animation.addByPrefix('talk', 'BF LOOP', 24, true); //During dialogue
 				char.flipX = !char.flipX;
 
 			case 'psychic':

@@ -7,4 +7,4 @@ echo.
 echo done.
 pause
 pwd
-explorer.exe export\debug\windows\bin
+explorer.exe export\debug\windows\64\bin

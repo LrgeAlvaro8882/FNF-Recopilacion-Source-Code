@@ -713,7 +713,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Icon Colors',
 		'Tankman Ascending',
 		'Tankman Death Lines',
-		'Info Bar'
+		'Info Bar',
+		'Circle Notes',
+		'Hardcore Mode'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -918,6 +920,12 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Info Bar':
 						ClientPrefs.infoBar = !ClientPrefs.infoBar;
+
+					case 'Circle Notes':
+						ClientPrefs.circleNotes = !ClientPrefs.circleNotes;
+				
+					case 'Hardcore Mode':
+						ClientPrefs.hardcoreMode = !ClientPrefs.hardcoreMode;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -1027,6 +1035,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, Tankman will insult you when\nyou die if he's the enemy.";
 			case 'Info Bar':
 				daText = "If checked, the text bar under the health\nbar will appear.";
+			case 'Circle Notes':
+				daText = "If checked, the arrows (notes) will turn\ninto circles.";
+			case 'Hardcore Mode':
+				daText = "If checked, if you miss, you lose. That's it.";
 		}
 		descText.text = daText;
 
@@ -1126,6 +1138,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.tankmanDeathLines;
 					case 'Info Bar':
 						daValue = ClientPrefs.infoBar;
+					case 'Circle Notes':
+						daValue = ClientPrefs.circleNotes;
+					case 'Hardcore Mode':
+						daValue = ClientPrefs.hardcoreMode;
 				}
 				checkbox.daValue = daValue;
 			}

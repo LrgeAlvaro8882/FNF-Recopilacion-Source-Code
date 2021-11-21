@@ -6,6 +6,7 @@ import lime.utils.Assets as LimeAssets;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
 #if sys
+import sys.io.Process;
 import sys.io.File;
 #end
 
@@ -15,9 +16,9 @@ class CoolUtil
 {
 	// [Difficulty name, Chart file suffix]
 	public static var difficultyStuff:Array<Dynamic> = [
-		['Easy', '-easy'],
+		['Facil', '-easy'],
 		['Normal', ''],
-		['Hard', '-hard']
+		['Dificil', '-hard']
 	];
 
 	public static function difficultyString():String

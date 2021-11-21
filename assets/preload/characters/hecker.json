@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Hecker Sing Note RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Hecker Sing Note UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Hecker Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				-281,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Hecker idle dance"
+		},
+		{
+			"offsets": [
+				-281,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Hecker Sing Note LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Hecker",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "hecker",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		135,
+		45
+	],
+	"camera_position": [
+		647,
+		-58
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

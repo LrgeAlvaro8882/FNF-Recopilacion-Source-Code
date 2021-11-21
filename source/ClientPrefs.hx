@@ -33,6 +33,8 @@ class ClientPrefs {
 	public static var tankmanAscends:Bool = true;
 	public static var tankmanDeathLines:Bool = true;
 	public static var infoBar:Bool = true;
+	public static var circleNotes:Bool = false;
+	public static var hardcoreMode:Bool = false;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -96,6 +98,8 @@ class ClientPrefs {
 		FlxG.save.data.tankmanAscends = tankmanAscends;
 		FlxG.save.data.tankmanDeathLines = tankmanDeathLines;
 		FlxG.save.data.infoBar = infoBar;
+		FlxG.save.data.circleNotes = circleNotes;
+		FlxG.save.data.hardcoreMode = hardcoreMode;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -200,6 +204,12 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.infoBar != null) {
 			infoBar = FlxG.save.data.infoBar;
+		}
+		if(FlxG.save.data.circleNotes != null) {
+			circleNotes = FlxG.save.data.circleNotes;
+		}
+		if(FlxG.save.data.hardcoreMode != null) {
+			hardcoreMode = FlxG.save.data.hardcoreMode;
 		}
 
 

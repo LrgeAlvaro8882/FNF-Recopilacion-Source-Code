@@ -69,6 +69,14 @@ class MenuCharacter extends FlxSprite
 			case 'garcello':
 				frames = Paths.getSparrowAtlas('menucharacters/Menu_Garcello');
 				animation.addByPrefix('idle', "M Garcello Idle", 24);
+
+			case 'huggymenu':
+				frames = Paths.getSparrowAtlas('menucharacters/Menu_Huggy');
+				animation.addByPrefix('idle', "HUGGY MENU", 24);
+
+			case 'hecker':
+				frames = Paths.getSparrowAtlas('menucharacters/Menu_Hecker');
+				animation.addByPrefix('idle', "Hecker idle dance", 24);
 		}
 		animation.play('idle');
 		updateHitbox();
@@ -103,6 +111,12 @@ class MenuCharacter extends FlxSprite
 				
 			case 'garcello':
 				offset.set(120, 34);
+
+			case 'huggymenu':
+				offset.set(100, 220);
+
+			case 'hecker':
+				offset.set(150, 60);
 		}
 
 		switch(character)
@@ -129,6 +143,10 @@ class MenuCharacter extends FlxSprite
 				scale.set(0.6, 0.6);
 			case 'garcello':
 				scale.set(0.57, 0.57);
+			case 'huggymenu':
+				scale.set(0.5, 0.5);
+			case 'hecker':
+				scale.set(0.6, 0.6);
 		}
 	}
 }

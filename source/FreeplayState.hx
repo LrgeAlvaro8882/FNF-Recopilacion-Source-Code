@@ -49,7 +49,10 @@ class FreeplayState extends MusicBeatState
 		['cg5'],							//CG5 Week
 		['agoti', 'agoti', 'agoti-crazy'],	//Agoti Week
 		['psychic'],						//Psychic Week
-		['camellia']						//Camellia Week
+		['camellia'],						//Camellia Week
+		['huggy'],							//Huggy Wuggy Week
+		['carol'],							//Hellchart Carol Week
+		['hecker']							//Hecker Week
 	];
 
 	var songs:Array<SongMetadata> = [];

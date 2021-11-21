@@ -51,7 +51,10 @@ class StoryMenuState extends MusicBeatState
 		true,	//CG5 Week
 		true,	//Agoti Week
 		true,	//Psychic Week
-		true	//Camellia Week
+		true,	//Camellia Week
+		true,	//Huggy Wuggy Week
+		true,	//Hellchart Carol Week
+		true,	//Hecker Week
 	];
 
 	//It works like this:
@@ -83,7 +86,10 @@ class StoryMenuState extends MusicBeatState
 		['nothing', 'bf', 'gf'],
 		['nothing', 'bf', 'gf'],
 		['psychic', 'bf', 'gf'],
-		['nothing', 'bf', 'gf']
+		['nothing', 'bf', 'gf'],
+		['huggymenu', 'bf', 'gf'],
+		['nothing', 'bf', 'gf'],
+		['hecker', 'bf', 'gf'],
 	];
 
 	//The week's name, displayed on top-right
@@ -114,7 +120,10 @@ class StoryMenuState extends MusicBeatState
 		"CG5",
 		"AGOTI",
 		"Psychic",
-		"Camellia"
+		"Camellia",
+		"Huggy Wuggy Wants to Play",
+		"Hellchart Carol by Bbpanzu",
+		"Hecker by Beluga"
 	];
 
 	//Background asset name, the background files are stored on assets/preload/menubackgrounds/
@@ -145,7 +154,10 @@ class StoryMenuState extends MusicBeatState
 		'template',
 		'template',
 		'psychic',
-		'template'
+		'template',
+		'template',
+		'template',
+		'hecker'
 	];
 	
 	var scoreText:FlxText;

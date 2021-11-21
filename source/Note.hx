@@ -84,15 +84,43 @@ class Note extends FlxSprite
 			case 'school' | 'schoolEvil':
 				if (isSustainNote)
 				{
-					loadGraphic(Paths.image('weeb/pixelUI/NOTE_assetsENDS'));
+					if(ClientPrefs.circleNotes)
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets_circleENDS'));
+					}
+					else
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assetsENDS'));
+					}
 					width = width / 4;
 					height = height / 2;
-					loadGraphic(Paths.image('weeb/pixelUI/NOTE_assetsENDS'), true, Math.floor(width), Math.floor(height));
+					if(ClientPrefs.circleNotes)
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets_circleENDS'), true, Math.floor(width), Math.floor(height));
+					}
+					else
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assetsENDS'), true, Math.floor(width), Math.floor(height));
+					}
 				} else {
-					loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets'));
+					if(ClientPrefs.circleNotes)
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets_circle'));
+					}
+					else
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets'));
+					}
 					width = width / 4;
 					height = height / 5;
-					loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets'), true, Math.floor(width), Math.floor(height));
+					if(ClientPrefs.circleNotes)
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets_circle'), true, Math.floor(width), Math.floor(height));
+					}
+					else
+					{
+						loadGraphic(Paths.image('weeb/pixelUI/NOTE_assets'), true, Math.floor(width), Math.floor(height));
+					}
 				}
 				loadPixelNoteAnims();
 
@@ -101,7 +129,14 @@ class Note extends FlxSprite
 				isPixel = true;
 
 			default:
-				frames = Paths.getSparrowAtlas('NOTE_assets');
+				if(ClientPrefs.circleNotes)
+				{
+					frames = Paths.getSparrowAtlas('NOTE_assets_circle');
+				}
+				else
+				{
+					frames = Paths.getSparrowAtlas('NOTE_assets');
+				}
 				loadNoteAnims();
 				antialiasing = ClientPrefs.globalAntialiasing;
 		}
@@ -186,7 +221,14 @@ class Note extends FlxSprite
 	function reloadNote(?prefix:String = '', ?suffix:String = '') {
 		var skin:String = PlayState.SONG.arrowSkin;
 		if(skin == null || skin.length < 1) {
-			skin = 'NOTE_assets';
+			if(ClientPrefs.circleNotes)
+			{
+				skin = 'NOTE_assets_circle';
+			}
+			else
+			{
+				skin = 'NOTE_assets';
+			}
 		}
 
 		var animName:String = null;

@@ -77,6 +77,10 @@
 		<library name="agoti"         preload="true" />
 		<library name="psychic"       preload="true" />
 		<library name="camellia"      preload="true" />
+		<library name="extras"	      preload="true" />
+		<library name="huggy"	      preload="true" />
+		<library name="shcarol"	      preload="true" />
+		<library name="hecker"	      preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
@@ -104,6 +108,10 @@
 		<library name="agoti"         preload="false" />
 		<library name="psychic"       preload="false" />
 		<library name="camellia"      preload="false" />
+		<library name="extras"	      preload="false" />
+		<library name="huggy"	      preload="false" />
+		<library name="shcarol"	      preload="false" />
+		<library name="hecker"	      preload="false" />
 	</section>
 	
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
@@ -152,14 +160,20 @@
 	<assets path="assets/agoti"         library="agoti"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/psychic"       library="psychic"       exclude="*.ogg" if="web"/>
 	<assets path="assets/psychic"       library="psychic"       exclude="*.mp3" unless="web"/>
-	<assets path="assets/camellia"      library="camellia"      exclude="*.ogg" if="web"/>
-	<assets path="assets/camellia"      library="camellia"      exclude="*.mp3" unless="web"/>
+	<assets path="assets/extras"      	library="extras"      	exclude="*.ogg" if="web"/>
+	<assets path="assets/extras"      	library="extras"      	exclude="*.mp3" unless="web"/>
+	<assets path="assets/huggy"      	library="huggy"      	exclude="*.ogg" if="web"/>
+	<assets path="assets/huggy"      	library="huggy"      	exclude="*.mp3" unless="web"/>
+	<assets path="assets/shcarol"      	library="shcarol"      	exclude="*.ogg" if="web"/>
+	<assets path="assets/shcarol"      	library="shcarol"      	exclude="*.mp3" unless="web"/>
+	<assets path="assets/camellia"     	library="camellia"     	exclude="*.ogg" if="web"/>
+	<assets path="assets/camellia"     	library="camellia"     	exclude="*.mp3" unless="web"/>
+	<assets path="assets/hecker"     	library="hecker"     	exclude="*.ogg" if="web"/>
+	<assets path="assets/hecker"     	library="hecker"     	exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
-
-	<haxelib name="actuate"/>
-	<haxelib name="extension-webm" if="desktop"/>
+	
 	<!-- <template path='mods' /> -->
 	
 	<!-- assets path="CHANGELOG.md" rename='changelog.txt' --/>

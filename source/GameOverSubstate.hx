@@ -33,6 +33,8 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'alvaro';
 			case 'bb':
 				daBf = 'bbdead';
+			case 'disc-bf':
+				daBf = 'disc-bf-ded';
 			default:
 				daBf = 'bf';
 		}
@@ -46,7 +48,14 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 
-		FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+		if(PlayState.SONG.song.toLowerCase() == 'hecker')
+		{
+			FlxG.sound.play(Paths.sound('ded'));
+		}
+		else
+		{
+			FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+		}
 		Conductor.changeBPM(100);
 		// FlxG.camera.followLerp = 1;
 		// FlxG.camera.focusOn(FlxPoint.get(FlxG.width / 2, FlxG.height / 2));
@@ -142,7 +151,14 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix), volume);
+		if(PlayState.SONG.song.toLowerCase() == 'hecker')
+		{
+			FlxG.sound.playMusic(Paths.music('silence'), volume);
+		}
+		else
+		{
+			FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix), volume);
+		}
 	}
 
 	function endBullshit():Void
@@ -152,7 +168,14 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			bf.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
-			FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
+			if(PlayState.SONG.song.toLowerCase() == 'hecker')
+			{
+				FlxG.sound.play(Paths.music('retrydc'));
+			}
+			else
+			{
+				FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
+			}
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()

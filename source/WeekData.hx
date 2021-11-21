@@ -31,7 +31,10 @@ class WeekData {
 		['Gimme-A-Break', 'Man-On-Stilts', 'Knock-Knock'],//CG5 Week
 		['Screenplay', 'Parasite', 'A.G.O.T.I'],	//Agoti Week
 		['Psychic', 'Late-Drive'],					//Psychic Week
-		['First-Town', 'Liquated', 'Why-Do-You-Hate-Me', 'Ghost']//Camellia Week
+		['First-Town', 'Liquated', 'Why-Do-You-Hate-Me', 'Ghost'],//Camellia Week
+		['Playtime'],								//Huggy Wuggy Week
+		['Hellroll'],								//Hellchart Carol Week
+		['Hecker']									//Hecker Week
 	];
 
 	// Custom week number, used for your week's score not being overwritten by a new vanilla week when the game updates
@@ -63,7 +66,10 @@ class WeekData {
 		null,	//CG5 Week
 		null,	//Agoti Week
 		null,	//Psychic Week
-		null	//Camellia Week
+		null,	//Camellia Week
+		null,	//Huggy Wuggy Week
+		null,	//Hellchart Carol Week
+		null,	//Hecker Week
 	];
 
 	//Tells which assets directory should it load
@@ -100,7 +106,10 @@ class WeekData {
 		'cg5',	//CG5 Week
 		'agoti',//Agoti Week
 		'psychic',//Psychic Week
-		'camellia'//Camellia Week
+		'camellia',//Camellia Week
+		'huggy',//Huggy Wuggy Week
+		'shcarol',//Hellchart Carol Week
+		'hecker'//Hecker Week
 	];
 
 	//The only use for this is to display a different name for the Week when you're on the score reset menu.
@@ -134,7 +143,10 @@ class WeekData {
 		null,	//CG5 Week
 		null,	//Agoti Week
 		null,	//Psychic Week
-		null	//Camellia Week
+		null,	//Camellia Week
+		null,	//Huggy Wuggy Week
+		null,	//Hellchart Carol Week
+		null,	//Hecker Week
 	];
 
 

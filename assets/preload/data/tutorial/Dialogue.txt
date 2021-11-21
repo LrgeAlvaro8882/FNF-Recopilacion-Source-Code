@@ -1,0 +1,6 @@
+???1:???2
+:1:talk:0.05:0:Al parecer ha entrado al tutorial. O es nuevo, o es tonto.
+:0:talk:0.05:0:Pues si. Puede que quiera usar la recopilacion para practicar o para jugar siempre.
+:1:talk:0.05:0:Bueno, simplemente vamos a mostrarle lo basico y ya no hablamos mas de el..
+:0:talk:0.05:0:Bueno, vamos a comenzar.
+:0:talk:0.023:0:(Por favor, ****, no sueltes spoilers del supuesto lore que en realidad no existe. Esta grabando o streameando ahora mismo.)

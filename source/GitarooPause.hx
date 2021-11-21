@@ -2,6 +2,8 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.text.FlxText;
+import flixel.util.FlxColor;
 import flixel.graphics.frames.FlxAtlasFrames;
 
 class GitarooPause extends MusicBeatState
@@ -10,6 +12,7 @@ class GitarooPause extends MusicBeatState
 	var cancelButton:FlxSprite;
 
 	var replaySelect:Bool = false;
+	
 
 	public function new():Void
 	{
@@ -28,6 +31,7 @@ class GitarooPause extends MusicBeatState
 		bf.frames = Paths.getSparrowAtlas('pauseAlt/bfLol');
 		bf.animation.addByPrefix('lol', "funnyThing", 13);
 		bf.animation.play('lol');
+		bf.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bf);
 		bf.screenCenter(X);
 
@@ -36,6 +40,7 @@ class GitarooPause extends MusicBeatState
 		replayButton.animation.addByPrefix('selected', 'bluereplay', 0, false);
 		replayButton.animation.appendByPrefix('selected', 'yellowreplay');
 		replayButton.animation.play('selected');
+		replayButton.antialiasing = ClientPrefs.globalAntialiasing;
 		add(replayButton);
 
 		cancelButton = new FlxSprite(FlxG.width * 0.58, replayButton.y);
@@ -43,7 +48,13 @@ class GitarooPause extends MusicBeatState
 		cancelButton.animation.addByPrefix('selected', 'bluecancel', 0, false);
 		cancelButton.animation.appendByPrefix('selected', 'cancelyellow');
 		cancelButton.animation.play('selected');
+		cancelButton.antialiasing = ClientPrefs.globalAntialiasing;
 		add(cancelButton);
+
+		var txt:FlxText = new FlxText(0, 0, FlxG.width, "Felicidades! Has encontrado la pantalla de muerte/pausa secreta. Estas feliz ahora?", 32);
+		txt.setFormat("VCR OSD Mono", 32, FlxColor.BLACK, CENTER);
+		txt.screenCenter();
+		add(txt);
 
 		changeThing();
 
@@ -69,7 +80,14 @@ class GitarooPause extends MusicBeatState
 				PlayState.deathCounter = 0;
 				PlayState.cpuControlled = false;
 				MusicBeatState.switchState(new MainMenuState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				if(ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));	
+				}
+				else if(!ClientPrefs.newMusicMenu)
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu-alt'));	
+				}
 			}
 		}
 

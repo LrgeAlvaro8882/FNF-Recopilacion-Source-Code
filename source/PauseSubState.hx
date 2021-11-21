@@ -19,7 +19,7 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resumir', 'Reiniciar cancion', 'Cambiar dificultad', 'Modo Practica', 'Botplay', 'Salir al menu'];
+	var menuItemsOG:Array<String> = ['Continuar', 'Reiniciar cancion', 'Cambiar dificultad', 'Modo Manco', 'Modo Gay', 'Salir al menu'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -70,7 +70,7 @@ class PauseSubState extends MusicBeatSubstate
 		blueballedTxt.updateHitbox();
 		add(blueballedTxt);
 
-		practiceText = new FlxText(20, 15 + 101, 0, "Modo Practica", 32);
+		practiceText = new FlxText(20, 15 + 101, 0, "MODO MANCO", 32);
 		practiceText.scrollFactor.set();
 		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
@@ -78,7 +78,7 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.visible = PlayState.practiceMode;
 		add(practiceText);
 
-		botplayText = new FlxText(20, FlxG.height - 40, 0, "BOTPLAY", 32);
+		botplayText = new FlxText(20, FlxG.height - 40, 0, "MODO GAY", 32);
 		botplayText.scrollFactor.set();
 		botplayText.setFormat(Paths.font('vcr.ttf'), 32);
 		botplayText.x = FlxG.width - (botplayText.width + 20);
@@ -162,7 +162,7 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (daSelected)
 			{
-				case "Resumir":
+				case "Continuar":
 					FlxG.sound.play(Paths.sound('cancelMenu'));
 					close();
 				case 'Cambiar dificultad':
@@ -176,7 +176,7 @@ class PauseSubState extends MusicBeatSubstate
 					{
 						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
 					}
-				case 'Modo Practica':
+				case 'Modo Manco':
 					PlayState.practiceMode = !PlayState.practiceMode;
 					PlayState.usedPractice = true;
 					practiceText.visible = PlayState.practiceMode;
@@ -199,7 +199,7 @@ class PauseSubState extends MusicBeatSubstate
 					{
 						FlxG.sound.play(Paths.sound('confirmMenu-alt'));
 					}
-				case 'Botplay':
+				case 'Modo Gay':
 					PlayState.cpuControlled = !PlayState.cpuControlled;
 					PlayState.usedPractice = true;
 					botplayText.visible = PlayState.cpuControlled;

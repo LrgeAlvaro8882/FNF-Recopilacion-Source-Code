@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Hecker.png">
+<SubTexture name="Hecker Sing Note DOWN0000" x="0" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0001" x="0" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0002" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0003" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0004" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0005" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0006" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0007" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0008" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note DOWN0009" x="574" y="0" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0000" x="1148" y="0" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0001" x="1722" y="0" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0002" x="0" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0003" x="0" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0004" x="574" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0005" x="574" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0006" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0007" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0008" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0009" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0010" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0011" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0012" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker idle dance0013" x="1148" y="504" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0001" x="1722" y="504" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0002" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0003" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0004" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0005" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0006" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0007" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0008" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0009" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note LEFT0010" x="0" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0000" x="574" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0001" x="574" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0002" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0003" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0004" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0005" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0006" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0007" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0008" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0009" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note RIGHT0010" x="1148" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0000" x="1722" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0001" x="1722" y="1008" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0002" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0003" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0004" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0005" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0006" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0007" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0008" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0009" x="0" y="1512" width="574" height="504"/>
+<SubTexture name="Hecker Sing Note UP0010" x="0" y="1512" width="574" height="504"/>
+</TextureAtlas>

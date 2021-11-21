@@ -24,18 +24,22 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
-		['Psych Engine Team'],
-		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
-		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
+		['Equipo de Psych Engine'],
+		['Shadow Mario',		'shadowmario',		'Programador Principal Del Psych Engine',			'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
+		['RiverOaken',			'riveroaken',		'Artista/Animador Principal Del Psych Engine',		'https://twitter.com/river_oaken',		0xFFC30085],
 		[''],
-		['Special Thanks'],
-		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFFFFFFF],
+		['Agradecimientos Especiales'],
+		['Keoiki',				'keoiki',			'Animaciones de los Note Splashes',						'https://twitter.com/Keoiki_',			0xFFFFFFFF],
 		[''],
-		["Funkin' Crew"],
-		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
-		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
-		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3]
+		["Equipo de FNF"],
+		['ninjamuffin99',		'ninjamuffin99',	"Programador de Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
+		['PhantomArcade',		'phantomarcade',	"Animador de Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
+		['evilsk8r',			'evilsk8r',			"Artista de Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
+		['kawaisprite',			'kawaisprite',		"Compositor de Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3],
+		[''],
+		['Equipo del Mod'],
+		['RZX_Alvaro888',		'alvaro',			'Creador y programador del mod',					'https://twitch.com/lrgealvaro8883',	0xFF924D00],
+		['ECHS',				'echs',				'Compositor de la nueva musica del menu',			'https://twitch.com/lrgealvaro8883',	0xFFFF3232]
 	];
 
 	var bg:FlxSprite;
